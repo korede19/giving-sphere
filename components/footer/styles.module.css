@@ -1,0 +1,145 @@
+.footer {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 80px 20px 20px;
+}
+
+.footerContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footerColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.footerHeading {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #232323;
+}
+
+.footerText {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 10px;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerList li {
+  margin-bottom: 12px;
+}
+
+.footerLink {
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+  font-size: 15px;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  display: inline-block;
+}
+
+.footerLink:hover {
+  color: #ef4036;
+  padding-left: 5px;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.socialLink {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.socialLink:hover {
+  background: #667eea;
+  border-color: #ffffff;
+  transform: translateY(-3px);
+}
+
+.footerBottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.404);
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.copyright {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+.footerBottomLinks {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footerBottomLink {
+  color: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footerBottomLink:hover {
+  color: #ef4036;
+}
+
+.separator {
+  color: rgba(201, 11, 11, 0.3);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footerBottomLinks {
+    justify-content: center;
+  }
+}

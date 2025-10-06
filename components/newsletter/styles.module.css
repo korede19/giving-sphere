@@ -1,0 +1,131 @@
+.ctaSection {
+  background-color: #ef4036;
+  padding: 80px 20px;
+}
+
+.ctaContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ctaHeading {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  max-width: 900px;
+}
+
+.ctaSubtext {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.ctaForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formGroup {
+  display: flex;
+  gap: 15px;
+  align-items: stretch;
+  max-width: 600px;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 18px 24px;
+  font-size: 16px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #2d3748;
+  font-style: italic;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.emailInput:focus {
+  outline: none;
+  border-color: #ef4036;
+  box-shadow: 0 0 0 3px rgba(44, 90, 160, 0.1);
+}
+
+.emailInput:disabled {
+  background-color: #f7fafc;
+  cursor: not-allowed;
+}
+
+.emailInput::placeholder {
+  color: #a0aec0;
+  font-style: italic;
+}
+
+.joinButton {
+  padding: 18px 50px;
+  background-color: #ffc239;
+  color: #161616;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.joinButton:hover:not(:disabled) {
+  background-color: #ffc239;
+  transform: translateY(-2px);
+}
+
+.message {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.success {
+  color: #22c55e;
+}
+
+.error {
+  color: #ef4444;
+}
+
+@media (max-width: 768px) {
+  .ctaSection {
+    padding: 60px 20px;
+    margin: 60px 0;
+  }
+
+  .ctaHeading {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .ctaSubtext {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .formGroup {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .emailInput {
+    padding: 16px 20px;
+  }
+
+  .joinButton {
+    padding: 16px 40px;
+    width: 100%;
+  }
+}

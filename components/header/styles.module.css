@@ -1,0 +1,47 @@
+.headerContain {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.headerContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 800;
+  color: #ffff;
+  font-size: 20px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.navLink {
+  color: #000000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navLink:hover {
+  color: #ef4036;
+  transition: 0.5imps all ease-in-out;
+}
+
+.donateBtn {
+  background-color: #ef4036;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: none;
+}
