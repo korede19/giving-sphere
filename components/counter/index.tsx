@@ -1,6 +1,8 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import styles from "./styles.module.css";
+import Family from "@/svg/family";
+import Partner from "@/svg/partner";
 
 export default function ScrollCounter() {
   const [familiesCount, setFamiliesCount] = useState(0);
@@ -58,6 +60,7 @@ export default function ScrollCounter() {
         <h2>Our impact in numbers</h2>
         <div className={styles.counterWrapper}>
           <div className={styles.counterItem}>
+            <Family />
             <div className={styles.counterNumber}>
               {familiesCount.toLocaleString()}
               <span className={styles.plus}>+</span>
@@ -65,6 +68,7 @@ export default function ScrollCounter() {
             <p className={styles.counterLabel}>Families Impacted</p>
           </div>
           <div className={styles.counterItem}>
+            <Partner />
             <div className={styles.counterNumber}>
               {partnersCount}
               <span className={styles.plus}>+</span>

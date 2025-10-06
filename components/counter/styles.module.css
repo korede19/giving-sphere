@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ef4036;
+  background-color: #ffe7e6;
   justify-content: center;
   padding: 40px 20px;
 }
@@ -17,8 +17,8 @@
 
 .counterContainer > h2 {
   text-align: center;
-  color: #ffffff;
-  font-size: 45px;
+  color: #232323;
+  font-size: 60px;
   margin-bottom: 20px;
   font-weight: 700;
 }
@@ -26,32 +26,36 @@
 .counterItem {
   text-align: center;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ef4036;
   transition: transform 0.3s ease;
 }
 
 .counterNumber {
   font-size: 45px;
   font-weight: bold;
-  color: #ffffff;
+  color: #232323;
 }
 
 .counterLabel {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #232323;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
 .plus {
-  color: #ffffff;
+  color: #232323;
 }
 
 .partnerBtn {
   margin-top: 30px;
   padding: 14px 28px;
-  background-color: #ffc239;
-  color: #000000;
+  background-color: #ef4036;
+  color: #ffffff;
   border: none;
   border-radius: 38px;
   font-size: 15px;

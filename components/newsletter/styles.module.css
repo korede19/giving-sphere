@@ -1,6 +1,32 @@
 .ctaSection {
-  background-color: #ef4036;
+  position: relative;
   padding: 80px 20px;
+}
+
+.ctaSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../public/assets/hero3.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  z-index: -2;
+}
+
+.ctaSection::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(89, 25, 25, 0.87);
+  z-index: -1;
 }
 
 .ctaContainer {
