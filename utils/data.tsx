@@ -40,3 +40,14 @@ export const values = [
     icon: "🎁",
   },
 ];
+
+export const teamMembers = [
+  { name: "Adeleke Oguniyinbo", role: "Board Member" },
+  { name: "Oyefunke Ajiboye", role: "Board Member" },
+  { name: "Isimeme Ughele", role: "Founder" },
+  { name: "Sharon Kajotoni", role: "Co-Founder" },
+  { name: "Victoria Alaga", role: "Programmes Support Coordinator" },
+  { name: "Ibiyengha Tobin", role: "Research Officer" },
+  { name: "Boluwatife Ogundiran", role: "Project Coordinator" },
+  { name: "Oluwabukola Babatunde", role: "Communications Manager" },
+];

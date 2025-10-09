@@ -1,0 +1,212 @@
+.teamSection {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.teamContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 42px;
+  font-weight: bold;
+  color: #323232;
+  margin: 0;
+  text-align: center;
+}
+
+.sliderWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.slider {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.sliderTrack {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slidePage {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 20px 10px;
+}
+
+.teamCard {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teamCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: #ef4036;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ef4036 0%, #8f231e 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  border: 3px solid #e2e8f0;
+}
+
+.memberName {
+  font-size: 25px;
+  font-weight: bold;
+  color: #1a202c;
+  margin: 0 0 8px 0;
+}
+
+.memberRole {
+  font-size: 15px;
+  color: #718096;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.navButton {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ef4036;
+  color: #ffffff;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.navButton:hover {
+  background-color: #ef4036;
+  transform: scale(1.1);
+}
+
+.navButton:active {
+  transform: scale(0.95);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ffc239;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  background-color: #ffc239;
+}
+
+.activeDot {
+  background-color: #ef4036;
+  width: 32px;
+  border-radius: 6px;
+}
+
+@media (max-width: 1024px) {
+  .slidePage {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .teamSection {
+    padding: 60px 20px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+  }
+
+  .sectionNumber {
+    font-size: 24px;
+  }
+
+  .sectionTitle {
+    font-size: 32px;
+  }
+
+  .slidePage {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sliderWrapper {
+    gap: 10px;
+  }
+
+  .navButton {
+    width: 40px;
+    height: 40px;
+    font-size: 28px;
+  }
+
+  .teamCard {
+    padding: 25px 15px;
+  }
+
+  .avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+  }
+
+  .memberName {
+    font-size: 18px;
+  }
+
+  .memberRole {
+    font-size: 14px;
+  }
+}

@@ -7,6 +7,7 @@ import ScrollCounter from "@/components/counter";
 import OurValues from "@/components/values";
 import Footer from "@/components/footer";
 import NewsletterCTA from "@/components/newsletter";
+import TeamSlider from "@/components/teams";
 
 const HomePage = () => {
   return (
@@ -16,6 +17,7 @@ const HomePage = () => {
       <ScrollCounter />
       <AboutComp />
       <OurValues />
+      <TeamSlider />
       <NewsletterCTA />
       <Footer />
     </div>
