@@ -1,0 +1,39 @@
+.contentContain {
+  background-color: #fff5f5;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 60px 0px;
+  background-color: #fff5f5;
+}
+
+.rowOne {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.colOne h2 {
+  font-size: 80px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ef4036;
+}
+
+.colTwo h2 {
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+.container p {
+  padding: 1% 0px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+}

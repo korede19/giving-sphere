@@ -1,0 +1,192 @@
+.solutionSection {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 70px 0px;
+}
+
+.solutionContainer {
+  max-width: 14 00px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 60px;
+  font-weight: bold;
+  color: #0f0f0f;
+  margin: 0;
+}
+
+.sdgContainer {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sdgBadge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.sdgBadge:hover {
+  transform: translateY(-5px);
+}
+
+.sdgNumber {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.sdgTitle {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.solutionsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  justify-content: center;
+  gap: 25px;
+}
+
+.solutionCard {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.solutionCard:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  border-color: #ef4036;
+  transform: translateY(-5px);
+}
+
+.cardHeader {
+  margin-bottom: 15px;
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #393939;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cardBody {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.previewText {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+.readMoreButton {
+  align-self: flex-start;
+  padding: 10px 24px;
+  background-color: #ef4036;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.readMoreButton:hover {
+  background-color: #e3362d;
+  transform: translateX(5px);
+}
+
+.readMoreButton:active {
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .solutionSection {
+    padding: 60px 20px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  .sectionNumber {
+    font-size: 24px;
+  }
+
+  .sectionTitle {
+    font-size: 32px;
+  }
+
+  .sdgContainer {
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  .sdgBadge {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+  }
+
+  .sdgNumber {
+    font-size: 28px;
+  }
+
+  .sdgTitle {
+    font-size: 11px;
+  }
+
+  .solutionsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .solutionCard {
+    padding: 25px;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .previewText {
+    font-size: 14px;
+  }
+}
