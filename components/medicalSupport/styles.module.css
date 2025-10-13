@@ -1,0 +1,303 @@
+.medicalSection {
+  padding: 80px 20px;
+  background-color: #faf8f8;
+}
+
+.medicalContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.sectionTitle {
+  font-size: 42px;
+  font-weight: bold;
+  color: #333334;
+  margin: 0;
+}
+
+.introSection {
+  margin-bottom: 50px;
+}
+
+.introText {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #2d3748;
+  margin: 0;
+}
+
+.introText strong {
+  font-weight: bold;
+  color: #ef4036;
+}
+
+.howItWorks {
+  margin-bottom: 60px;
+}
+
+.subsectionTitle {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1a202c;
+  margin: 0 0 30px 0;
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.stepCard {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.stepCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  border-color: #ef4036;
+}
+
+.stepNumber {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #ef4036 0%, #a32019 100%);
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.stepTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a202c;
+  margin: 0 0 15px 0;
+}
+
+.stepDescription {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.testimonialSection {
+  margin-bottom: 60px;
+}
+
+.videoPlaceholder {
+  background: linear-gradient(135deg, #ef4036 0%, #842c28 100%);
+  border-radius: 16px;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 500px;
+}
+
+.playIcon {
+  width: 80px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  color: #ef4036;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.playIcon:hover {
+  transform: scale(1.1);
+  background: #ffffff;
+}
+
+.videoText {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+}
+
+.videoSubtext {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.impactStories {
+  margin-bottom: 40px;
+}
+
+.carouselWrapper {
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.carousel {
+  position: relative;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonialCard {
+  width: 100%;
+  transition: all 0.5s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.testimonialCard.active {
+  display: block;
+}
+
+.quoteIcon {
+  font-size: 72px;
+  color: #ef4036;
+  line-height: 1;
+}
+
+.testimonialQuote {
+  font-size: 20px;
+  font-style: italic;
+  color: #2d3748;
+  line-height: 1.7;
+  margin: 0 0 30px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonialAuthor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.testimonialAuthor strong {
+  font-size: 18px;
+  color: #1a202c;
+}
+
+.testimonialStory {
+  font-size: 15px;
+  color: #718096;
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #cbd5e0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  background-color: #a0aec0;
+}
+
+.activeDot {
+  background-color: #ef4036;
+  width: 32px;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .medicalSection {
+    padding: 60px 20px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sectionNumber {
+    font-size: 24px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .introText {
+    font-size: 16px;
+  }
+
+  .subsectionTitle {
+    font-size: 24px;
+  }
+
+  .stepsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .videoPlaceholder {
+    padding: 60px 30px;
+    min-height: 300px;
+  }
+
+  .playIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .videoText {
+    font-size: 20px;
+  }
+
+  .carouselWrapper {
+    padding: 30px 20px;
+  }
+
+  .carousel {
+    min-height: 300px;
+  }
+
+  .testimonialQuote {
+    font-size: 17px;
+  }
+
+  .testimonialAuthor strong {
+    font-size: 16px;
+  }
+}

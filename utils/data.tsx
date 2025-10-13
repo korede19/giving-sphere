@@ -1,11 +1,9 @@
 export const MenuLinks = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
-  { title: "Get Help", href: "/get-help" },
+  { title: "Our Work", href: "/our-work" },
+  { title: "News & Resources", href: "/news&resources" },
   { title: "Get Involved", href: "/get-involved" },
-  { title: "1k Helplinee", href: "/1k-helpline" },
-  { title: "Stories & updates", href: "/stories&updates" },
-  { title: "Contact", href: "/contact" },
 ];
 
 export const HeroImages = [
@@ -87,4 +85,72 @@ export const sdgs = [
   { number: 3, title: "Good Health", color: "#4C9F38" },
   { number: 10, title: "Reduced Inequalities", color: "#DD1367" },
   { number: 17, title: "Partnerships", color: "#19486A" },
+];
+
+export const emergencyCases = [
+  {
+    title: "Benue crisis (2024)",
+    description:
+      "Mobilized urgent relief support for displaced families and communities facing hardship partnering with trusted local organizations for timely assistance delivery.",
+    image: "/assets/hero3.jpg",
+  },
+  {
+    title: "Tarkwa bay evictees (2020)",
+    description:
+      "Provided emergency funds to aid displaced families facing sudden loss and instability following forced evictions in Tarkwa bay community.",
+    image: "/assets/hero3.jpg",
+  },
+  {
+    title: "Justice for Uwa (2020)",
+    description:
+      "Joined nationwide calls for justice after horrific assault and murder of Uwa Omozuwa standing in solidarity with campaigns demanding accountability.",
+    image: "/assets/hero3.jpg",
+  },
+  {
+    title: "Ita-Faaji building collapse (2019)",
+    description:
+      "Contributed to emergency relief efforts following the tragic building collapse in Lagos Island, supporting affected families and communities.",
+    image: "/assets/hero3.jpg",
+  },
+];
+
+export const howItWorksSteps = [
+  {
+    number: "1",
+    title: "Monthly focus & verification",
+    description:
+      "Each month, we focus on a specific health need or cause. Verified cases are selected through trusted hospitals, clinics, or individual referrals.",
+  },
+  {
+    number: "2",
+    title: "Collective giving",
+    description:
+      "Thousands of compassionate individuals contribute as little as ₦1,000 or more every month.",
+  },
+  {
+    number: "3",
+    title: "Impact",
+    description:
+      "Funds are disbursed to cover urgent treatments, medical supplies, or hospital bills ensuring help gets to people, when it matters most.",
+  },
+];
+export const impactStories = [
+  {
+    name: "Taiwo",
+    story: "Successful emergency surgery",
+    quote:
+      "Thanks to the 1K Helpline, I was able to get the emergency surgery I desperately needed. I am forever grateful.",
+  },
+  {
+    name: "Alero",
+    story: "Elective CS surgery",
+    quote:
+      "The support from the 1K Helpline made it possible for me to safely deliver my baby. Thank you for being there when we needed help most.",
+  },
+  {
+    name: "6-year-old boy",
+    story: "Orthopedic surgery",
+    quote:
+      "Our son can now walk properly thanks to the orthopedic surgery funded by the 1K Helpline. Words cannot express our gratitude.",
+  },
 ];

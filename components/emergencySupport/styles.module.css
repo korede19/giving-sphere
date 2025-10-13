@@ -1,0 +1,202 @@
+.emergencySection {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.emergencyContainer {
+  padding: 80px 0px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 42px;
+  font-weight: bold;
+  color: #232323;
+  margin: 0;
+}
+
+.introText {
+  margin-bottom: 40px;
+}
+
+.mainDescription {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #2e2e2e;
+  margin: 0;
+}
+
+.recentWork {
+  margin-bottom: 40px;
+}
+
+.subheading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2d3748;
+  margin: 0 0 20px 0;
+}
+
+.calloutBox {
+  background-color: #fff5f5;
+  border-left: 4px solid #e53e3e;
+  padding: 20px 25px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+.calloutText {
+  font-size: 16px;
+  color: #742a2a;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.calloutText strong {
+  font-weight: bold;
+}
+
+.link {
+  color: #e53e3e;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #ef4036;
+}
+
+.casesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.caseCard {
+  background: #f8f9fa;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.caseCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  border-color: #e53e3e;
+}
+
+.imagePlaceholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #a21f1f 0%, #a24b4b 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.imageIcon {
+  font-size: 48px;
+}
+
+.imageText {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.caseContent {
+  padding: 25px;
+}
+
+.caseTitle {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1a202c;
+  margin: 0 0 15px 0;
+}
+
+.caseImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #e53e3e;
+}
+
+.caseDescription {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .emergencySection {
+    padding: 60px 20px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .sectionNumber {
+    font-size: 24px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .mainDescription {
+    font-size: 16px;
+  }
+
+  .subheading {
+    font-size: 18px;
+  }
+
+  .calloutBox {
+    padding: 15px 20px;
+  }
+
+  .calloutText {
+    font-size: 14px;
+  }
+
+  .casesGrid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .imagePlaceholder {
+    height: 180px;
+  }
+
+  .imageIcon {
+    font-size: 40px;
+  }
+
+  .caseContent {
+    padding: 20px;
+  }
+
+  .caseTitle {
+    font-size: 18px;
+  }
+
+  .caseDescription {
+    font-size: 14px;
+  }
+}
