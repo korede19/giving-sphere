@@ -154,3 +154,56 @@ export const impactStories = [
       "Our son can now walk properly thanks to the orthopedic surgery funded by the 1K Helpline. Words cannot express our gratitude.",
   },
 ];
+
+export const equityFocus = [
+  {
+    icon: "🏥",
+    text: "Supporting access to the National Health Insurance Scheme (NHIS) for at risk communities.",
+  },
+  {
+    icon: "📊",
+    text: "Contributing to policy research and advocacy for inclusive health financing.",
+    hasLink: true,
+  },
+  {
+    icon: "🛡️",
+    text: "Exploring systems that protect families from catastrophic out-of-pocket health expenses.",
+  },
+];
+
+export const outreachPrograms = [
+  {
+    title: "Stockings of support (Project SOS)",
+    description:
+      "Our seasonal outreach is a festive, end-of-year campaign where we support in delivering care packages, and essentials to patients and at-risk families.",
+    icon: "🎁",
+  },
+  {
+    title: "Health drives",
+    description:
+      "We conduct ad-hoc community health engagements such as basic health checks, screenings, health education and community events that provide wellness services in communities.",
+    icon: "⚕️",
+  },
+  {
+    title: "Gbaupe Health Drive (Abuja)",
+    description:
+      "In partnership with ARRDEC NGO, we provided health services and education to over 300 residents in the Gbaupe community.",
+    icon: "🤝",
+    highlight: true,
+  },
+];
+
+export const volunteerBenefits = [
+  { icon: "💼", text: "Gain valuable experience" },
+  { icon: "🤝", text: "Meet wonderful people" },
+  { icon: "💪", text: "Build your confidence" },
+  { icon: "🎉", text: "Have fun making a difference" },
+];
+
+export const partnershipTypes = [
+  "Emergency relief funding",
+  "Unrestricted financial contributions",
+  "In-kind donations",
+  "Employee engagement",
+  "Multi-year strategic collaborations",
+];
