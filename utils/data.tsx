@@ -207,3 +207,130 @@ export const partnershipTypes = [
   "Employee engagement",
   "Multi-year strategic collaborations",
 ];
+
+type NavItems = {
+  about: AboutNav;
+  ourWork: SimpleNav;
+  resources: SimpleNav;
+  getInvolved: SimpleNav;
+};
+
+type NavLink = {
+  text: string;
+  description?: string;
+  href: string;
+  external?: boolean;
+};
+
+type NavSection = {
+  heading: string;
+  links: NavLink[];
+};
+
+type AboutNav = {
+  title: string;
+  sections: NavSection[];
+};
+
+type SimpleNav = {
+  title: string;
+  links: NavLink[];
+};
+
+export const navItems: NavItems = {
+  about: {
+    title: "ABOUT",
+    sections: [
+      {
+        heading: "OUR SOLUTION",
+        links: [
+          { text: "Emergency Support", href: "/give" },
+          { text: "The 1k helpline", href: "/support" },
+          {
+            text: "Health Equity & Financial Protection",
+            href: "/shop",
+            external: true,
+          },
+          {
+            text: "Community outreach & capacity building",
+            href: "/shop",
+            external: true,
+          },
+        ],
+      },
+      {
+        heading: "EMMERGENCY RESPONSE & CRISIS SUPPORT",
+        links: [
+          { text: "Benue crisis (2024)", href: "/give" },
+          { text: "Tarkwa bay evictees (2020)", href: "/support" },
+          {
+            text: "Justice for Uwa (2020)",
+            href: "/shop",
+            external: true,
+          },
+          {
+            text: "Ita-Faaji building collapse (2019)",
+            href: "/shop",
+            external: true,
+          },
+        ],
+      },
+      {
+        heading: "OUR VALUES",
+        links: [
+          { text: "Collaboration", href: "/give" },
+          { text: "Compassion", href: "/support" },
+          {
+            text: "Integrity",
+            href: "/shop",
+            external: true,
+          },
+          {
+            text: "Generosity",
+            href: "/shop",
+            external: true,
+          },
+        ],
+      },
+    ],
+  },
+  ourWork: {
+    title: "OUR WORK",
+    links: [
+      { text: "The Issue", href: "/issue" },
+      { text: "Our Approach", href: "/approach" },
+      { text: "Impact Stories", href: "/stories" },
+    ],
+  },
+  resources: {
+    title: "NEWS & RESOURCES",
+    links: [
+      { text: "Where We Work", href: "/where" },
+      { text: "What We Do", href: "/what" },
+      { text: "Our Impact", href: "/impact" },
+    ],
+  },
+  getInvolved: {
+    title: "GET INVOLVED",
+    links: [
+      {
+        text: "Latest News",
+        description:
+          "Join us on our vision to build a world where quality healthcare and wellbeing are accessible to all.",
+        href: "/news",
+      },
+      {
+        text: "Publications",
+        description:
+          "Join us on our vision to build a world where quality healthcare and wellbeing are accessible to all.",
+        href: "/publications",
+      },
+      {
+        text: "Media",
+        description:
+          "Join us on our vision to build a world where quality healthcare and wellbeing are accessible to all.",
+        href: "/media",
+      },
+    ],
+  },
+};

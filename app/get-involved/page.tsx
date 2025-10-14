@@ -1,12 +1,12 @@
 import Footer from "@/components/footer";
-import Header from "@/components/header";
+import MegaHeader from "@/components/megaHeader";
 import VolunteerPartner from "@/components/partner";
 import React from "react";
 
 const GetInvolved = () => {
   return (
     <div>
-      <Header />
+      <MegaHeader />
       <VolunteerPartner />
       <Footer />
     </div>
