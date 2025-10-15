@@ -271,6 +271,11 @@
   flex-direction: column;
 }
 
+.navItem {
+  display: flex;
+  gap: 10px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

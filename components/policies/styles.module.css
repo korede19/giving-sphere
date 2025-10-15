@@ -1,0 +1,267 @@
+.policySection {
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.policyContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.mainTitle {
+  font-size: 48px;
+  font-weight: bold;
+  color: #242424;
+  margin: 0 0 20px 0;
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4a5568;
+  margin: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.sectionNumber {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2c5aa0;
+  min-width: 30px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c1a1a;
+  margin: 0;
+}
+
+.itemList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-left: 45px;
+}
+
+.listItem {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2d3748;
+  padding-left: 25px;
+  position: relative;
+}
+
+.listItem::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2c5aa0;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.sectionContent {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2d3748;
+  margin: 0;
+  margin-left: 45px;
+}
+
+.contactSection {
+  margin-top: 50px;
+  padding-top: 40px;
+  border-top: 2px solid #e2e8f0;
+}
+
+.contactCard {
+  background: linear-gradient(135deg, #fff0f0 0%, #ffe6e6 100%);
+  padding: 35px;
+  border-radius: 12px;
+  border-left: 4px solid #ef4036;
+}
+
+.contactTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a202c;
+  margin: 0 0 15px 0;
+  font-family: "Georgia", serif;
+}
+
+.contactText {
+  font-size: 16px;
+  color: #2d3748;
+  margin: 0 0 25px 0;
+  line-height: 1.6;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+.contactIcon {
+  font-size: 20px;
+}
+
+.contactLink {
+  color: #ef4036;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.contactLink:hover {
+  color: #ef4036;
+  text-decoration: underline;
+}
+
+.contactInfo {
+  color: #2d3748;
+  font-size: 16px;
+}
+
+.footer {
+  margin-top: 40px;
+  padding-top: 30px;
+  border-top: 1px solid #e2e8f0;
+  text-align: center;
+}
+
+.lastUpdated {
+  font-size: 14px;
+  color: #718096;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .policySection {
+    padding: 60px 20px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+  }
+
+  .mainTitle {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .content {
+    padding: 30px 25px;
+  }
+
+  .section {
+    margin-bottom: 30px;
+  }
+
+  .sectionHeader {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .sectionNumber {
+    font-size: 18px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .itemList,
+  .sectionContent {
+    margin-left: 0;
+  }
+
+  .listItem {
+    font-size: 15px;
+    padding-left: 20px;
+  }
+
+  .contactCard {
+    padding: 25px 20px;
+  }
+
+  .contactTitle {
+    font-size: 20px;
+  }
+
+  .contactText {
+    font-size: 15px;
+  }
+
+  .contactItem {
+    padding: 10px 12px;
+  }
+
+  .contactLink,
+  .contactInfo {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 28px;
+  }
+
+  .contactItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .contactLink {
+    word-break: break-all;
+  }
+}

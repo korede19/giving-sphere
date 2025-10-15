@@ -110,9 +110,16 @@ export default function MegaHeader() {
               </div>
             )}
           </div>
-
+          <div className={styles.navItem}>
+            <Link href="/our-work" className={styles.navLink}>
+              OUR WORK
+            </Link>
+            <Link href="/news&resources" className={styles.navLink}>
+              NEWS & RESOURCES
+            </Link>
+          </div>
           {/* Other Navigation Items with Simple Dropdowns */}
-          {(["ourWork", "resources", "getInvolved"] as const).map((key) => (
+          {(["getInvolved"] as const).map((key) => (
             <div
               key={key}
               className={styles.navItem}
@@ -120,7 +127,7 @@ export default function MegaHeader() {
               onMouseLeave={closeDropdowns}
             >
               <button className={styles.navLink}>
-                {navItems[key].title}
+                <Link href={navItems[key].link}>{navItems[key].title}</Link>
                 <span className={styles.arrow}>▼</span>
               </button>
 

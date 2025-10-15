@@ -30,7 +30,7 @@ export default function HealthEquityOutreach() {
                   <p className={styles.focusText}>
                     {item.text}
                     {item.hasLink && (
-                      <a href="/news-resources" className={styles.seeMoreLink}>
+                      <a href="/news&resources" className={styles.seeMoreLink}>
                         See more →
                       </a>
                     )}

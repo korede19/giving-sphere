@@ -7,7 +7,7 @@ const AboutComp = () => {
     <div className={styles.container}>
       <div className={styles.colOne}>
         <Image
-          src="/assets/imgOne.jpg"
+          src="/assets/about.jpg"
           width={500}
           height={500}
           alt="aboutImage"

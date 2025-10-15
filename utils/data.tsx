@@ -210,8 +210,6 @@ export const partnershipTypes = [
 
 type NavItems = {
   about: AboutNav;
-  ourWork: SimpleNav;
-  resources: SimpleNav;
   getInvolved: SimpleNav;
 };
 
@@ -230,16 +228,19 @@ type NavSection = {
 type AboutNav = {
   title: string;
   sections: NavSection[];
+  link: string;
 };
 
 type SimpleNav = {
   title: string;
   links: NavLink[];
+  link: string;
 };
 
 export const navItems: NavItems = {
   about: {
     title: "ABOUT",
+    link: "/get-involved",
     sections: [
       {
         heading: "OUR SOLUTION",
@@ -294,24 +295,25 @@ export const navItems: NavItems = {
       },
     ],
   },
-  ourWork: {
-    title: "OUR WORK",
-    links: [
-      { text: "The Issue", href: "/issue" },
-      { text: "Our Approach", href: "/approach" },
-      { text: "Impact Stories", href: "/stories" },
-    ],
-  },
-  resources: {
-    title: "NEWS & RESOURCES",
-    links: [
-      { text: "Where We Work", href: "/where" },
-      { text: "What We Do", href: "/what" },
-      { text: "Our Impact", href: "/impact" },
-    ],
-  },
+  // ourWork: {
+  //   title: "OUR WORK",
+  //   links: [
+  //     { text: "The Issue", href: "/issue" },
+  //     { text: "Our Approach", href: "/approach" },
+  //     { text: "Impact Stories", href: "/stories" },
+  //   ],
+  // },
+  // resources: {
+  //   title: "NEWS & RESOURCES",
+  //   links: [
+  //     { text: "Where We Work", href: "/where" },
+  //     { text: "What We Do", href: "/what" },
+  //     { text: "Our Impact", href: "/impact" },
+  //   ],
+  // },
   getInvolved: {
     title: "GET INVOLVED",
+    link: "/get-involved",
     links: [
       {
         text: "Latest News",
@@ -320,17 +322,104 @@ export const navItems: NavItems = {
         href: "/news",
       },
       {
-        text: "Publications",
+        text: "Partner with us",
         description:
-          "Join us on our vision to build a world where quality healthcare and wellbeing are accessible to all.",
-        href: "/publications",
-      },
-      {
-        text: "Media",
-        description:
-          "Join us on our vision to build a world where quality healthcare and wellbeing are accessible to all.",
-        href: "/media",
+          "Whether you're a company, hospital, foundation, or institution, we’d love to explore how we can work together. To start a conversation, please contact us at; info@givingspherecharity.org",
+        href: "mailto:info@givingspherecharity.org",
       },
     ],
   },
 };
+
+export const sections = [
+  {
+    number: "1",
+    title: "Information we collect",
+    items: [
+      "Personal details (name, email, phone) when you subscribe, donate, or contact us.",
+      "Payment information (processed securely by third-party providers).",
+      "Technical data (cookies, browser type, pages visited).",
+    ],
+  },
+  {
+    number: "2",
+    title: "How we use your information",
+    items: [
+      "To process donations and send receipts.",
+      "To communicate updates, newsletters, and appeals (if you opt-in).",
+      "To improve our website and services.",
+    ],
+  },
+  {
+    number: "3",
+    title: "Sharing of information",
+    items: [
+      "We do not sell or trade your personal information.",
+      "We may share necessary data with payment processors and trusted service providers.",
+      "We may disclose information if required by law.",
+    ],
+  },
+  {
+    number: "4",
+    title: "Cookies",
+    content:
+      "Our website uses cookies to improve user experience. You can disable cookies in your browser settings.",
+  },
+  {
+    number: "5",
+    title: "Data security",
+    content:
+      "We take reasonable measures to protect your personal information from unauthorized access, loss, or misuse. However, no online system is 100% secure.",
+  },
+  {
+    number: "6",
+    title: "Your rights",
+    items: [
+      "You can request access, correction, or deletion of your personal data.",
+      "You may unsubscribe from communications at any time.",
+    ],
+  },
+];
+
+export const termsSections = [
+  {
+    number: "1",
+    title: "Use of our website",
+    items: [
+      "You agree to use this site only for lawful purposes.",
+      "You must not attempt to disrupt or misuse the website.",
+      "Content belongs to Givingsphere Charity Foundation and may not be copied or distributed without permission.",
+    ],
+  },
+  {
+    number: "2",
+    title: "Donations",
+    items: [
+      "All donations are voluntary and non-refundable.",
+      "Donations will be used to support our charitable projects as described on our website.",
+      "We use trusted third-party processors to handle donations securely.",
+    ],
+  },
+  {
+    number: "3",
+    title: "Disclaimer & limitation of liability",
+    items: [
+      'We provide this website on an "as-is" basis. We do not guarantee uninterrupted access or error-free content.',
+      "To the maximum extent permitted by law, Givingsphere Charity Foundation is not liable for any loss or damages resulting from the use of this website.",
+    ],
+  },
+  {
+    number: "4",
+    title: "External links",
+    content:
+      "Our website may link to third-party sites. We are not responsible for their content, policies, or practices.",
+  },
+  {
+    number: "5",
+    title: "Governing law",
+    items: [
+      "These Terms are governed by the laws of Nigeria. Any disputes will be resolved in the courts of Nigeria.",
+      "If you do not agree with these Terms, please do not use our website.",
+    ],
+  },
+];
