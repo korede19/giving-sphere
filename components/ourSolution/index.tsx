@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import styles from "./styles.module.css";
-import { sdgs, solutions } from "@/utils/data";
+import { solutions } from "@/utils/data";
+import Image from "next/image";
 
 export default function OurSolution() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -17,22 +18,16 @@ export default function OurSolution() {
           <h2 className={styles.sectionTitle}>Our Solution</h2>
         </div>
 
-        <div className={styles.sdgContainer}>
-          {sdgs.map((sdg) => (
-            <div
-              key={sdg.number}
-              className={styles.sdgBadge}
-              style={{ backgroundColor: sdg.color }}
-            >
-              <div className={styles.sdgNumber}>{sdg.number}</div>
-              <div className={styles.sdgTitle}>{sdg.title}</div>
-            </div>
-          ))}
-        </div>
-
         <div className={styles.solutionsGrid}>
           {solutions.map((solution, index) => (
             <div key={index} className={styles.solutionCard}>
+              <Image
+                src={solution.image}
+                width={200}
+                height={200}
+                alt="icon"
+                className={styles.imageIcon}
+              />
               <div className={styles.cardHeader}>
                 <h3 className={styles.cardTitle}>{solution.title}</h3>
               </div>

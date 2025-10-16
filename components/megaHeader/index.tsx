@@ -52,7 +52,7 @@ export default function MegaHeader() {
             onMouseLeave={closeDropdowns}
           >
             <button className={styles.navLink}>
-              {navItems.about.title}
+              <Link href={navItems.about.link}>{navItems.about.title}</Link>
               <span className={styles.arrow}>▼</span>
             </button>
 
@@ -136,8 +136,7 @@ export default function MegaHeader() {
                   <ul className={styles.dropdownList}>
                     {navItems[key].links.map((link: NavLink, idx: number) => (
                       <li key={idx} className={styles.otherItems}>
-                        <h4 className={styles.linkHead}>{link.text}</h4>
-                        <p>{link.description}</p>
+                        <Link href={link.href}>{link.text}</Link>
                       </li>
                     ))}
                   </ul>

@@ -1,11 +1,11 @@
 import Footer from "@/components/footer";
-import Header from "@/components/header";
+import MegaHeader from "@/components/megaHeader";
 import React from "react";
 
 const NewsResources = () => {
   return (
     <div>
-      <Header />
+      <MegaHeader />
       <Footer />
     </div>
   );

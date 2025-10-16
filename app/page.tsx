@@ -5,9 +5,9 @@ import AboutComp from "@/components/aboutUs";
 import ScrollCounter from "@/components/counter";
 import OurValues from "@/components/values";
 import Footer from "@/components/footer";
-import NewsletterCTA from "@/components/newsletter";
 import TeamSlider from "@/components/teams";
 import MegaHeader from "@/components/megaHeader";
+import Testimonial from "@/components/testimonials";
 
 const HomePage = () => {
   return (
@@ -18,7 +18,7 @@ const HomePage = () => {
       <AboutComp />
       <OurValues />
       <TeamSlider />
-      <NewsletterCTA />
+      <Testimonial />
       <Footer />
     </div>
   );

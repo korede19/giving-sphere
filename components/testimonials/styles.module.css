@@ -1,0 +1,116 @@
+.impactStories {
+  max-width: 1400px;
+  margin: 40px auto 80px auto;
+}
+
+.impactStories h3 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.carouselWrapper {
+  background: #fff9f9;
+  padding: 50px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.carousel {
+  position: relative;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonialCard {
+  width: 100%;
+  transition: all 0.5s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.testimonialCard.active {
+  display: block;
+}
+
+.quoteIcon {
+  font-size: 72px;
+  color: #ef4036;
+  line-height: 1;
+}
+
+.testimonialQuote {
+  font-size: 20px;
+  font-style: italic;
+  color: #2d3748;
+  line-height: 1.7;
+  margin: 0 0 30px 0;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.testimonialAuthor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.testimonialAuthor strong {
+  font-size: 18px;
+  color: #1a202c;
+}
+
+.testimonialStory {
+  font-size: 15px;
+  color: #718096;
+}
+
+.carouselDots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #cbd5e0;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.dot:hover {
+  background-color: #a0aec0;
+}
+
+.activeDot {
+  background-color: #ef4036;
+  width: 32px;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+  .carouselWrapper {
+    padding: 30px 20px;
+  }
+
+  .carousel {
+    min-height: 300px;
+  }
+
+  .testimonialQuote {
+    font-size: 17px;
+  }
+
+  .testimonialAuthor strong {
+    font-size: 16px;
+  }
+}

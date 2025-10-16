@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function EmergencyResponse() {
   return (
-    <section className={styles.emergencySection}>
+    <section className={styles.emergencySection} id="emergency-support">
       <div className={styles.emergencyContainer}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>

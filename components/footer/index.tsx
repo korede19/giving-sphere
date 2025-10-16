@@ -26,18 +26,18 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/values" className={styles.footerLink}>
-                  Our Values
+                <a href="/our-work" className={styles.footerLink}>
+                  Our Work
                 </a>
               </li>
               <li>
-                <a href="/partners" className={styles.footerLink}>
-                  Partners
+                <a href="/news&resources" className={styles.footerLink}>
+                  News & Resources
                 </a>
               </li>
               <li>
                 <a href="/contact" className={styles.footerLink}>
-                  Contact
+                  Get Involved
                 </a>
               </li>
             </ul>
@@ -45,26 +45,21 @@ export default function Footer() {
 
           {/* Programs */}
           <div className={styles.footerColumn}>
-            <h3 className={styles.footerHeading}>Programs</h3>
+            <h3 className={styles.footerHeading}>Learn More</h3>
             <ul className={styles.footerList}>
               <li>
-                <a href="/programs/education" className={styles.footerLink}>
-                  Education
+                <a href="#" className={styles.footerLink}>
+                  Meet Our Team
                 </a>
               </li>
               <li>
-                <a href="/programs/health" className={styles.footerLink}>
-                  Health
+                <a href="#" className={styles.footerLink}>
+                  Donate
                 </a>
               </li>
               <li>
-                <a href="/programs/community" className={styles.footerLink}>
-                  Community
-                </a>
-              </li>
-              <li>
-                <a href="/programs/youth" className={styles.footerLink}>
-                  Youth Development
+                <a href="#" className={styles.footerLink}>
+                  Cookie Policy
                 </a>
               </li>
             </ul>
@@ -74,23 +69,29 @@ export default function Footer() {
           <div className={styles.footerColumn}>
             <h3 className={styles.footerHeading}>Get In Touch</h3>
             <ul className={styles.footerList}>
-              <li className={styles.footerText}>📧 info@organization.org</li>
-              <li className={styles.footerText}>📞 +234 (0) 123 456 7890</li>
+              <li className={styles.footerText}>
+                📧 info@givingspherecharity.org
+              </li>
+              <li className={styles.footerText}>
+                🎗️ Registered Charity no: 179000
+              </li>
               <li className={styles.footerText}>
                 📍 Ibadan, Oyo State, Nigeria
               </li>
             </ul>
             <div className={styles.socialLinks}>
-              <a href="#" className={styles.socialLink} aria-label="Facebook">
-                FB
-              </a>
-              <a href="#" className={styles.socialLink} aria-label="Twitter">
-                TW
-              </a>
-              <a href="#" className={styles.socialLink} aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/givingspherecharity/"
+                className={styles.socialLink}
+                aria-label="Instagram"
+              >
                 IG
               </a>
-              <a href="#" className={styles.socialLink} aria-label="LinkedIn">
+              <a
+                href="https://www.linkedin.com/company/givingsphere-charity-foundation"
+                className={styles.socialLink}
+                aria-label="LinkedIn"
+              >
                 LI
               </a>
             </div>
@@ -99,7 +100,7 @@ export default function Footer() {
 
         <div className={styles.footerBottom}>
           <p className={styles.copyright}>
-            © {currentYear} Organization Name. All rights reserved.
+            © {currentYear} Giving Sphere. All rights reserved.
           </p>
           <div className={styles.footerBottomLinks}>
             <a href="/privacy" className={styles.footerBottomLink}>
@@ -108,6 +109,10 @@ export default function Footer() {
             <span className={styles.separator}>|</span>
             <a href="/terms" className={styles.footerBottomLink}>
               Terms of Service
+            </a>
+            <span className={styles.separator}>|</span>
+            <a href="#" className={styles.footerBottomLink}>
+              Cookie Policy
             </a>
           </div>
         </div>

@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 export default function HealthEquityOutreach() {
   return (
     <>
-      <section className={styles.HealthEquityOutreach}>
+      <section className={styles.HealthEquityOutreach} id="health-equity">
         <div className={styles.container}>
           {/* Health Equity Section */}
           <div className={styles.equitySection}>
@@ -84,7 +84,7 @@ export default function HealthEquityOutreach() {
                 Partner with us to bring healthcare and support to underserved
                 communities
               </p>
-              <a href="/partnerships" className={styles.ctaButton}>
+              <a href="/get-involved/#partner" className={styles.ctaButton}>
                 Partner with us
               </a>
             </div>

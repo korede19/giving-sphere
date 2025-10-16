@@ -52,6 +52,7 @@ export const teamMembers = [
 
 export const solutions = [
   {
+    image: "/assets/nopoverty.png",
     title: "Emergency response & crisis support",
     preview:
       "Providing rapid aid to communities affected by conflict and displacement.",
@@ -59,6 +60,7 @@ export const solutions = [
       "When a crisis occurs, we provide rapid aid to communities affected by conflict, displacement, or sudden health crises.",
   },
   {
+    image: "/assets/goodhealth.png",
     title: "Medical support services (The 1K helpline)",
     preview:
       "Supporting patients at risk who struggle with out-of-pocket payments.",
@@ -66,6 +68,7 @@ export const solutions = [
       "Since its inception in 2018, our 1K Helpline initiative has been supporting patients at risk who struggle with out-of-pocket payments. The name \"1K\" denotes one thousand Naira, often seen as 'pocket change' by many working-class Nigerians showing how small contributions can make a big difference.",
   },
   {
+    image: "/assets/inequalities.png",
     title: "Health equity & financial protection",
     preview:
       "Tackling out-of-pocket payments through advocacy and collaboration.",
@@ -73,18 +76,12 @@ export const solutions = [
       "Through advocacy and collaboration with the Nigerian national bodies we aim to tackle the reliance on out-of-pocket payments and increase financial protection. For example, through the National Health Insurance Scheme (NHIS).",
   },
   {
+    image: "/assets/partnership.png",
     title: "Community outreach & capacity building",
     preview: "Running awareness campaigns and training for healthcare workers.",
     fullText:
       "We run awareness campaigns, digital registration drives for health insurance, training for public healthcare workers, and community-led health education.",
   },
-];
-
-export const sdgs = [
-  { number: 1, title: "No Poverty", color: "#E5243B" },
-  { number: 3, title: "Good Health", color: "#4C9F38" },
-  { number: 10, title: "Reduced Inequalities", color: "#DD1367" },
-  { number: 17, title: "Partnerships", color: "#19486A" },
 ];
 
 export const emergencyCases = [
@@ -155,6 +152,24 @@ export const impactStories = [
   },
 ];
 
+export const homeImpactStories = [
+  {
+    name: "Anonymous",
+    quote:
+      "Thank you GivingSphere, for supporting us financially. May God continue to bless you.",
+  },
+  {
+    name: "Father of 4-year-old",
+    quote:
+      "Thank you very much. May God bless you. I am very, very happy. I have come to say thank you...",
+  },
+  {
+    name: "Dr. Nneka",
+    quote:
+      "I am overwhelmed. It is just wonderful to have GivingSphere come. Every child and parent appreciate what you are doing. I pray and hope that you continue to give.",
+  },
+];
+
 export const equityFocus = [
   {
     icon: "🏥",
@@ -197,7 +212,7 @@ export const volunteerBenefits = [
   { icon: "💼", text: "Gain valuable experience" },
   { icon: "🤝", text: "Meet wonderful people" },
   { icon: "💪", text: "Build your confidence" },
-  { icon: "🎉", text: "Have fun making a difference" },
+  { icon: "🎉", text: "Have fun making a real difference" },
 ];
 
 export const partnershipTypes = [
@@ -240,38 +255,36 @@ type SimpleNav = {
 export const navItems: NavItems = {
   about: {
     title: "ABOUT",
-    link: "/get-involved",
+    link: "/about",
     sections: [
       {
         heading: "OUR SOLUTION",
         links: [
-          { text: "Emergency Support", href: "/give" },
-          { text: "The 1k helpline", href: "/support" },
+          { text: "Emergency Support", href: "/our-work/#emergency-support" },
+          { text: "The 1k helpline", href: "/our-work/#1k-support" },
           {
             text: "Health Equity & Financial Protection",
-            href: "/shop",
-            external: true,
+            href: "/our-work/#health-equity",
           },
           {
             text: "Community outreach & capacity building",
-            href: "/shop",
-            external: true,
+            href: "#",
           },
         ],
       },
       {
         heading: "EMMERGENCY RESPONSE & CRISIS SUPPORT",
         links: [
-          { text: "Benue crisis (2024)", href: "/give" },
-          { text: "Tarkwa bay evictees (2020)", href: "/support" },
+          { text: "Benue crisis (2024)", href: "#" },
+          { text: "Tarkwa bay evictees (2020)", href: "#" },
           {
             text: "Justice for Uwa (2020)",
-            href: "/shop",
+            href: "#",
             external: true,
           },
           {
             text: "Ita-Faaji building collapse (2019)",
-            href: "/shop",
+            href: "#",
             external: true,
           },
         ],
@@ -279,16 +292,16 @@ export const navItems: NavItems = {
       {
         heading: "OUR VALUES",
         links: [
-          { text: "Collaboration", href: "/give" },
-          { text: "Compassion", href: "/support" },
+          { text: "Collaboration", href: "#" },
+          { text: "Compassion", href: "#" },
           {
             text: "Integrity",
-            href: "/shop",
+            href: "#",
             external: true,
           },
           {
             text: "Generosity",
-            href: "/shop",
+            href: "#",
             external: true,
           },
         ],
@@ -316,16 +329,12 @@ export const navItems: NavItems = {
     link: "/get-involved",
     links: [
       {
-        text: "Latest News",
-        description:
-          "Join us on our vision to build a world where quality healthcare and wellbeing are accessible to all.",
-        href: "/news",
+        text: "Volunteer with us",
+        href: "/get-involved/#volunteer",
       },
       {
         text: "Partner with us",
-        description:
-          "Whether you're a company, hospital, foundation, or institution, we’d love to explore how we can work together. To start a conversation, please contact us at; info@givingspherecharity.org",
-        href: "mailto:info@givingspherecharity.org",
+        href: "/get-involved/#partner",
       },
     ],
   },

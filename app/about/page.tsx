@@ -1,7 +1,7 @@
 import AboutHero from "@/components/aboutHero";
 import AboutSection from "@/components/aboutSection";
 import Footer from "@/components/footer";
-import Header from "@/components/header";
+import MegaHeader from "@/components/megaHeader";
 import OurSolution from "@/components/ourSolution";
 import OurStory from "@/components/ourStory";
 import TeamSlider from "@/components/teams";
@@ -11,7 +11,7 @@ import React from "react";
 const About = () => {
   return (
     <div>
-      <Header />
+      <MegaHeader />
       <AboutHero />
       <AboutSection />
       <OurSolution />

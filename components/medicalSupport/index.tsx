@@ -24,7 +24,7 @@ export default function MedicalSupport() {
   };
 
   return (
-    <section className={styles.medicalSection}>
+    <section className={styles.medicalSection} id="1k-support">
       <div className={styles.medicalContainer}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>

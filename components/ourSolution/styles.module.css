@@ -25,45 +25,6 @@
   margin: 0;
 }
 
-.sdgContainer {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 50px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.sdgBadge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 120px;
-  height: 120px;
-  border-radius: 8px;
-  color: #ffffff;
-  text-align: center;
-  padding: 15px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.sdgBadge:hover {
-  transform: translateY(-5px);
-}
-
-.sdgNumber {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.sdgTitle {
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
 .solutionsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -80,6 +41,13 @@
   border: 2px solid transparent;
   display: flex;
   flex-direction: column;
+}
+
+.imageIcon {
+  width: 30%;
+  height: 30%;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .solutionCard:hover {

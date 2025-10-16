@@ -15,7 +15,7 @@ export default function VolunteerPartner() {
 
   return (
     <>
-      <section className={styles.volunteerContainer}>
+      <section className={styles.volunteerContainer} id="volunteer">
         <div className={styles.container}>
           {/* Volunteer Section */}
           <div className={styles.volunteerSection}>
@@ -80,7 +80,7 @@ export default function VolunteerPartner() {
       </section>
 
       {/* Partner Section */}
-      <section className={styles.partnerContainer}>
+      <section className={styles.partnerContainer} id="partner">
         <div className={styles.partnerSection}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>Partner with us</h2>

@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import { HeroImages } from "@/utils/data";
+import Link from "next/link";
 import DonateCard from "../donateCard";
 
 const HeroSection = () => {
@@ -46,7 +47,9 @@ const HeroSection = () => {
                         out-of-pocket expenses for patients at risk in Nigeria.
                       </p>
                       <div className={styles.heroBtn}>
-                        <button className={styles.btnOne}>Contact Us</button>
+                        <button className={styles.btnOne}>
+                          <Link href="/get-involved">Get Involved &rarr;</Link>
+                        </button>
                         <button className={styles.btnTwo}>
                           Watch our story
                         </button>
