@@ -14,9 +14,9 @@ const OurStory = () => {
             and urgently needed a blood transfusion. His survival lit the fire
             that keeps us going and inspires us to do more.
           </p>
-          <button className={styles.learnMoreButton}>
+          {/* <button className={styles.learnMoreButton}>
             Learn More <span>&rarr;</span>
-          </button>
+          </button> */}
         </div>
         <div className={styles.colTwo}>
           <Image

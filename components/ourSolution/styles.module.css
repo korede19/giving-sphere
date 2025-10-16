@@ -44,10 +44,11 @@
 }
 
 .imageIcon {
-  width: 30%;
-  height: 30%;
+  width: 90px;
+  height: 90px;
   border-radius: 10px;
   margin-bottom: 20px;
+  object-fit: cover;
 }
 
 .solutionCard:hover {
