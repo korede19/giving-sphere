@@ -7,9 +7,9 @@ export const MenuLinks = [
 ];
 
 export const HeroImages = [
-  { id: 1, src: "/assets/hero1.jpg", alt: "Hero Image 1" },
-  { id: 2, src: "/assets/hero2.jpg", alt: "Hero Image 2" },
-  { id: 3, src: "/assets/hero3.jpg", alt: "Hero Image 3" },
+  { id: 1, src: "/assets/hero3.jpeg", alt: "Hero Image 1" },
+  { id: 2, src: "/assets/banner2.jpg", alt: "Hero Image 2" },
+  { id: 3, src: "/assets/banner3.jpg", alt: "Hero Image 3" },
 ];
 
 export const values = [
