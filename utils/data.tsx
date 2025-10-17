@@ -268,7 +268,7 @@ export const navItems: NavItems = {
           },
           {
             text: "Community outreach & capacity building",
-            href: "#",
+            href: "/our-work/#outreach",
           },
         ],
       },
@@ -475,4 +475,117 @@ export const browserLinks = [
 export const thirdPartyServices = [
   "Google Analytics — to monitor site performance and usage trends.",
   "Social media plugins — to facilitate sharing and embed content.",
+];
+
+export const testimonials = [
+  {
+    type: "text",
+    quote:
+      "Thank you GivingSphere, for supporting us financially. May God continue to bless you.",
+    author: "Beneficiary",
+    image: "/testimonial-bg-1.jpg",
+  },
+  {
+    type: "text",
+    quote:
+      "Thank you very much. May God bless you. I am very, very happy. I have come to say thank you...",
+    author: "Father of 4-year-old",
+    image: "/testimonial-bg-2.jpg",
+  },
+  {
+    type: "text",
+    quote:
+      "I am overwhelmed. It is just wonderful to have GivingSphere come. Every child and parent appreciate what you are doing. I pray and hope that you continue to give.",
+    author: "Dr. Nneka",
+    role: "Healthcare Professional",
+    image: "/testimonial-bg-3.jpg",
+  },
+  {
+    type: "audio",
+    title: "Patient Testimonial",
+    audioUrl: "/testimonial-audio.mp3",
+    author: "Beneficiary Family",
+    image: "/audio-bg.jpg",
+  },
+  {
+    type: "video",
+    title: "Impact Story",
+    videoUrl: "/testimonial-video.mp4",
+    thumbnail: "/video-thumbnail.jpg",
+    author: "Community Member",
+    image: "/video-bg.jpg",
+  },
+];
+
+export const newsItems = [
+  {
+    id: 1,
+    type: "resource",
+    category: "Resource",
+    title:
+      "Healthcare without walls: expanding NHIS access to Nigeria’s informal sector",
+    description:
+      "Around 90% of Nigeria's workforce operates within the informal sector, which includes a diverse range of individuals",
+    image: "assets/hero1.jpg",
+    date: "October, 2025",
+    downloadUrl: "downloads/report.pdf",
+    fileSize: "200kb",
+  },
+  {
+    id: 2,
+    type: "news",
+    category: "News",
+    title: "GivingSphere Responds to Benue Crisis 2024",
+    description:
+      "Our emergency response team mobilized urgent relief support for displaced families and communities facing hardship in Benue State.",
+    image: "assets/benue.jpg",
+    date: "October 15, 2025",
+    link: "#",
+  },
+  // {
+  //   id: 3,
+  //   type: "news",
+  //   category: "News",
+  //   title: "1K Helpline Reaches 1000+ Beneficiaries",
+  //   description:
+  //     "A milestone achievement as our flagship initiative successfully provides medical support to over 1,000 patients at risk.",
+  //   image: "/news-2.jpg",
+  //   date: "September 20, 2024",
+  //   link: "/news/1k-helpline-milestone",
+  // },
+  // {
+  //   id: 4,
+  //   type: "resource",
+  //   category: "Policy Brief",
+  //   title: "Healthcare Financing in Nigeria: Policy Recommendations",
+  //   description:
+  //     "Our research findings and policy recommendations for improving health equity and financial protection in Nigeria.",
+  //   image: "/policy-brief.jpg",
+  //   date: "August 2024",
+  //   downloadUrl: "/downloads/policy-brief-2024.pdf",
+  //   fileSize: "1.8 MB",
+  // },
+  // {
+  //   id: 5,
+  //   type: "news",
+  //   category: "Partnership",
+  //   title: "New Partnership with ARRDEC NGO",
+  //   description:
+  //     "GivingSphere announces strategic partnership to expand community health services in underserved areas of Abuja.",
+  //   image: "/news-3.jpg",
+  //   date: "July 10, 2024",
+  //   link: "/news/arrdec-partnership",
+  // },
+  // {
+  //   id: 6,
+  //   type: "resource",
+  //   category: "Guide",
+  //   title: "Community Health Volunteer Training Manual",
+  //   description:
+  //     "Comprehensive training guide for volunteers participating in our community outreach and capacity building programs.",
+  //   image: "/training-manual.jpg",
+  //   date: "June 2024",
+  //   downloadUrl: "/downloads/volunteer-training-manual.pdf",
+  //   fileSize: "3.2 MB",
+  // },
 ];

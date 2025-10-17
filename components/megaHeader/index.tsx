@@ -114,9 +114,6 @@ export default function MegaHeader() {
             <Link href="/our-work" className={styles.navLink}>
               OUR WORK
             </Link>
-            <Link href="/news&resources" className={styles.navLink}>
-              NEWS & RESOURCES
-            </Link>
           </div>
           {/* Other Navigation Items with Simple Dropdowns */}
           {(["getInvolved"] as const).map((key) => (
@@ -144,6 +141,11 @@ export default function MegaHeader() {
               )}
             </div>
           ))}
+          <div className={styles.navItem}>
+            <Link href="/news&resources" className={styles.navLink}>
+              NEWS & RESOURCES
+            </Link>
+          </div>
         </nav>
 
         <div className={styles.actions}>

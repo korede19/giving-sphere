@@ -43,7 +43,7 @@ export default function HealthEquityOutreach() {
       </section>
 
       {/* Community Outreach Section */}
-      <section className={styles.outreachContainer}>
+      <section className={styles.outreachContainer} id="outreach">
         <div className={styles.outreachSection}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionTitle}>

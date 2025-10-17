@@ -1,6 +1,5 @@
 import AboutHero from "@/components/aboutHero";
 import AboutSection from "@/components/aboutSection";
-import DonateCard from "@/components/donateCard";
 import Footer from "@/components/footer";
 import MegaHeader from "@/components/megaHeader";
 import OurSolution from "@/components/ourSolution";
@@ -14,7 +13,6 @@ const About = () => {
     <div>
       <MegaHeader />
       <AboutHero />
-      <DonateCard />
       <AboutSection />
       <OurSolution />
       <OurValues />

@@ -36,7 +36,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="/contact" className={styles.footerLink}>
+                <a href="/get-involved" className={styles.footerLink}>
                   Get Involved
                 </a>
               </li>
@@ -103,11 +103,11 @@ export default function Footer() {
             © {currentYear} Giving Sphere. All rights reserved.
           </p>
           <div className={styles.footerBottomLinks}>
-            <a href="/privacy" className={styles.footerBottomLink}>
+            <a href="/privacy-policy" className={styles.footerBottomLink}>
               Privacy Policy
             </a>
             <span className={styles.separator}>|</span>
-            <a href="/terms" className={styles.footerBottomLink}>
+            <a href="/terms-of-use" className={styles.footerBottomLink}>
               Terms of Service
             </a>
           </div>

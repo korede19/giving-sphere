@@ -1,0 +1,287 @@
+.newsSection {
+  padding: 80px 20px;
+  background-color: #ffffff;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.sectionTitle {
+  font-size: 48px;
+  font-weight: bold;
+  color: #2a2a2a;
+  margin: 0 0 15px 0;
+}
+
+.sectionSubtitle {
+  font-size: 18px;
+  color: #2f2f2f;
+  margin: 0;
+}
+
+.filterBar {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 12px 28px;
+  background: #f7fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #323232;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterBtn:hover {
+  border-color: #ef4036;
+  color: #ef4036;
+  background: #f0f4ff;
+}
+
+.filterBtn.active {
+  background: #ef4036;
+  border-color: #ef4036;
+  color: #ffffff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  border-color: #ef4036;
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #e2e8f0;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cardImage {
+  transform: scale(1.01);
+}
+
+.badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #ef4036;
+  color: #ffffff;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  z-index: 2;
+}
+
+.cardContent {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.date,
+.fileSize {
+  font-size: 14px;
+  color: #718096;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cardTitle {
+  font-size: 22px;
+  font-weight: bold;
+  color: #1a202c;
+  margin: 0 0 15px 0;
+  line-height: 1.3;
+}
+
+.cardDescription {
+  font-size: 15px;
+  color: #4a5568;
+  line-height: 1.6;
+  margin: 0 0 20px 0;
+  flex: 1;
+}
+
+.readMoreBtn,
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+.readMoreBtn {
+  background: transparent;
+  color: #ef4036;
+  border: 2px solid #ef4036;
+}
+
+.readMoreBtn:hover {
+  background: #ef4036;
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+.downloadBtn {
+  background: linear-gradient(135deg, #ef4036 0%, #a24a45 100%);
+  color: #ffffff;
+  border: 2px solid transparent;
+}
+
+.downloadBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.4);
+}
+
+.downloadIcon {
+  font-size: 18px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px 20px;
+  color: #718096;
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsSection {
+    padding: 60px 20px;
+  }
+
+  .sectionTitle {
+    font-size: 36px;
+  }
+
+  .sectionSubtitle {
+    font-size: 16px;
+  }
+
+  .filterBar {
+    gap: 10px;
+  }
+
+  .filterBtn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .cardImage {
+    height: 200px;
+  }
+
+  .cardContent {
+    padding: 20px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+  }
+
+  .ctaSection {
+    padding: 40px 25px;
+  }
+
+  .ctaText {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sectionTitle {
+    font-size: 28px;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filterBtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+  }
+
+  .readMoreBtn,
+  .downloadBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}

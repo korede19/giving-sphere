@@ -7,7 +7,7 @@ const AboutSection = () => {
       <div className={styles.container}>
         <div className={styles.rowOne}>
           <div className={styles.colOne}>
-            <h2>59%</h2>
+            <h2>70%</h2>
           </div>
           <div className={styles.colTwo}>
             <h2>
