@@ -18,7 +18,7 @@ const DonateCard: React.FC<DonateCardProps> = ({
   const [donationAmount, setDonationAmount] = useState<"onetime" | "monthly">(
     "monthly"
   );
-  const [selectedAmount, setSelectedAmount] = useState<number>(25);
+  const [selectedAmount, setSelectedAmount] = useState<number>(1000);
   const [customAmount, setCustomAmount] = useState<string>("");
   const [dedication] = useState<string>("");
 
@@ -45,7 +45,14 @@ const DonateCard: React.FC<DonateCardProps> = ({
   };
 
   return (
-    <div className={styles.donateCard}>
+    <div
+      className={styles.donateCard}
+      style={{
+        position: "relative",
+        zIndex: 9999,
+        pointerEvents: "auto",
+      }}
+    >
       <div className={styles.container}>
         <div className={styles.content}>
           <h2 className={styles.title}>{title}</h2>
@@ -58,18 +65,18 @@ const DonateCard: React.FC<DonateCardProps> = ({
                 donationAmount === "onetime" ? styles.active : ""
               }`}
               onClick={() => setDonationAmount("onetime")}
+              style={{ pointerEvents: "auto", cursor: "pointer" }}
             >
-              {" "}
-              OneTime{" "}
+              One Time
             </button>
             <button
               className={`${styles.toggleBtn} ${
                 donationAmount === "monthly" ? styles.active : ""
               }`}
               onClick={() => setDonationAmount("monthly")}
+              style={{ pointerEvents: "auto", cursor: "pointer" }}
             >
-              {" "}
-              Monthly{" "}
+              Monthly
             </button>
           </div>
           <div className={styles.amountGrid}>
@@ -82,27 +89,36 @@ const DonateCard: React.FC<DonateCardProps> = ({
                     : ""
                 }`}
                 onClick={() => handleAmountSelect(amount)}
+                style={{ pointerEvents: "auto", cursor: "pointer" }}
               >
-                ₦{amount}
+                ₦{amount.toLocaleString()}
               </button>
             ))}
           </div>
 
           <div className={styles.customAmountSection}>
-            <div className={styles.customAmountInput}>
-              <span className={styles.dollarSign}>₦</span>
+            <div
+              className={styles.customAmountInput}
+              style={{ pointerEvents: "auto" }}
+            >
+              <span className={styles.currencySymbol}>₦</span>
               <input
                 type="number"
-                placeholder=""
+                placeholder="Enter amount"
                 value={customAmount}
                 onChange={handleCustomAmountChange}
                 className={styles.amountInput}
+                style={{ pointerEvents: "auto", cursor: "text" }}
               />
               <span className={styles.currency}>NGN</span>
             </div>
           </div>
-          <button className={styles.donateBtn} onClick={handleDonate}>
-            DONATE ₦{customAmount || selectedAmount}{" "}
+          <button
+            className={styles.donateBtn}
+            onClick={handleDonate}
+            style={{ pointerEvents: "auto", cursor: "pointer" }}
+          >
+            DONATE ₦{(customAmount || selectedAmount).toLocaleString()}{" "}
             {donationAmount === "monthly" ? "MONTHLY" : ""}
           </button>
         </div>
@@ -110,4 +126,5 @@ const DonateCard: React.FC<DonateCardProps> = ({
     </div>
   );
 };
+
 export default DonateCard;
