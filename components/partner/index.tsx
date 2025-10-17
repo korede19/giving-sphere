@@ -67,10 +67,10 @@ export default function VolunteerPartner() {
 
               <div className={styles.imageSection}>
                 <Image
-                  src={"/assets/hero3.jpeg"}
+                  src={"/assets/partner.png"}
                   alt="Volunteer"
                   width={300}
-                  height={300}
+                  height={600}
                   className={styles.image}
                 />
               </div>

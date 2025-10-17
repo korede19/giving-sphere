@@ -89,25 +89,25 @@ export const emergencyCases = [
     title: "Benue crisis (2024)",
     description:
       "Mobilized urgent relief support for displaced families and communities facing hardship partnering with trusted local organizations for timely assistance delivery.",
-    image: "/assets/hero3.jpg",
+    image: "/assets/benue.jpg",
   },
   {
     title: "Tarkwa bay evictees (2020)",
     description:
       "Provided emergency funds to aid displaced families facing sudden loss and instability following forced evictions in Tarkwa bay community.",
-    image: "/assets/hero3.jpg",
+    image: "/assets/bay.jpg",
   },
   {
     title: "Justice for Uwa (2020)",
     description:
       "Joined nationwide calls for justice after horrific assault and murder of Uwa Omozuwa standing in solidarity with campaigns demanding accountability.",
-    image: "/assets/hero3.jpg",
+    image: "/assets/uwa.jpg",
   },
   {
     title: "Ita-Faaji building collapse (2019)",
     description:
       "Contributed to emergency relief efforts following the tragic building collapse in Lagos Island, supporting affected families and communities.",
-    image: "/assets/hero3.jpg",
+    image: "/assets/faaji.jpg",
   },
 ];
 
@@ -275,34 +275,30 @@ export const navItems: NavItems = {
       {
         heading: "EMMERGENCY RESPONSE & CRISIS SUPPORT",
         links: [
-          { text: "Benue crisis (2024)", href: "#" },
-          { text: "Tarkwa bay evictees (2020)", href: "#" },
+          { text: "Benue crisis (2024)", href: "/our-work/#cases" },
+          { text: "Tarkwa bay evictees (2020)", href: "/our-work/#cases" },
           {
             text: "Justice for Uwa (2020)",
-            href: "#",
-            external: true,
+            href: "/our-work/#cases",
           },
           {
             text: "Ita-Faaji building collapse (2019)",
-            href: "#",
-            external: true,
+            href: "/our-work/#cases",
           },
         ],
       },
       {
         heading: "OUR VALUES",
         links: [
-          { text: "Collaboration", href: "#" },
-          { text: "Compassion", href: "#" },
+          { text: "Collaboration", href: "/about/#values" },
+          { text: "Compassion", href: "/about/#values" },
           {
             text: "Integrity",
-            href: "#",
-            external: true,
+            href: "/about/#values",
           },
           {
             text: "Generosity",
-            href: "#",
-            external: true,
+            href: "/about/#values",
           },
         ],
       },
@@ -431,4 +427,52 @@ export const termsSections = [
       "If you do not agree with these Terms, please do not use our website.",
     ],
   },
+];
+
+export const cookieTypes = [
+  {
+    purpose: "Strictly necessary",
+    type: "First-party, session, or persistent",
+    functionality:
+      "Required for core website functions (e.g. navigation, security). Without these, the site cannot operate properly.",
+  },
+  {
+    purpose: "Performance / Analytics",
+    type: "First-party or third-party",
+    functionality:
+      "To collect anonymous data about how visitors use the site (pages visited, time spent, errors) to help us improve the site.",
+  },
+  {
+    purpose: "Functionality / Preferences",
+    type: "First-party",
+    functionality:
+      "To remember your preferences (e.g. language, donation currency, display settings).",
+  },
+  {
+    purpose: "Advertising / Tracking",
+    type: "Third-party",
+    functionality:
+      "To deliver relevant promotional content (if you've opted in) or measure ad campaign effectiveness.",
+  },
+];
+
+export const browserLinks = [
+  { name: "Chrome", url: "https://support.google.com/chrome/answer/95647" },
+  {
+    name: "Firefox",
+    url: "https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox",
+  },
+  {
+    name: "Safari",
+    url: "https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac",
+  },
+  {
+    name: "Edge",
+    url: "https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09",
+  },
+];
+
+export const thirdPartyServices = [
+  "Google Analytics — to monitor site performance and usage trends.",
+  "Social media plugins — to facilitate sharing and embed content.",
 ];

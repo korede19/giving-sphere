@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from "react";
 import styles from "./styles.module.css";
 import Family from "@/svg/family";
 import Partner from "@/svg/partner";
+import Link from "next/link";
 
 export default function ScrollCounter() {
   const [familiesCount, setFamiliesCount] = useState(0);
@@ -76,7 +77,9 @@ export default function ScrollCounter() {
             <div className={styles.counterLabel}>Our Partners</div>
           </div>
         </div>
-        <button className={styles.partnerBtn}>Partner with us</button>
+        <button className={styles.partnerBtn}>
+          <Link href="/get-involved/#partner">Partner with us</Link>
+        </button>
       </div>
     </>
   );

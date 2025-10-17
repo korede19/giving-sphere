@@ -20,10 +20,10 @@ const OurStory = () => {
         </div>
         <div className={styles.colTwo}>
           <Image
-            src="/assets/hero3.jpeg"
+            src="/assets/baby.webp"
             alt="Our Story"
-            width={500}
-            height={500}
+            width={1000}
+            height={1000}
             className={styles.imageStory}
           />
         </div>

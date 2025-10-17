@@ -48,7 +48,7 @@ export default function Footer() {
             <h3 className={styles.footerHeading}>Learn More</h3>
             <ul className={styles.footerList}>
               <li>
-                <a href="#" className={styles.footerLink}>
+                <a href="/about/#teams" className={styles.footerLink}>
                   Meet Our Team
                 </a>
               </li>
@@ -58,7 +58,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className={styles.footerLink}>
+                <a href="/cookie-policy" className={styles.footerLink}>
                   Cookie Policy
                 </a>
               </li>
@@ -109,10 +109,6 @@ export default function Footer() {
             <span className={styles.separator}>|</span>
             <a href="/terms" className={styles.footerBottomLink}>
               Terms of Service
-            </a>
-            <span className={styles.separator}>|</span>
-            <a href="#" className={styles.footerBottomLink}>
-              Cookie Policy
             </a>
           </div>
         </div>

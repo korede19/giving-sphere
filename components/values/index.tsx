@@ -33,7 +33,7 @@ export default function OurValues() {
 
   return (
     <>
-      <section className={styles.valuesSection} ref={sectionRef}>
+      <section className={styles.valuesSection} ref={sectionRef} id="values">
         <div className={styles.valuesContainer}>
           <div
             className={`${styles.sectionHeader} ${

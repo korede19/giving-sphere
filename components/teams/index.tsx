@@ -48,7 +48,7 @@ export default function TeamSlider() {
   const currentPage = Math.floor(currentIndex / itemsPerPage);
 
   return (
-    <section className={styles.teamSection}>
+    <section className={styles.teamSection} id="teams">
       <div className={styles.teamContainer}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Our Team</h2>

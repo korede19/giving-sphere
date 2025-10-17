@@ -1,0 +1,321 @@
+.policySection {
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.policyContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.mainTitle {
+  font-size: 48px;
+  font-weight: bold;
+  color: #232323;
+  margin: 0 0 15px 0;
+}
+
+.lastUpdated {
+  font-size: 16px;
+  color: #718096;
+  margin: 0;
+  font-style: italic;
+}
+
+.content {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1a202c;
+  margin: 0 0 20px 0;
+}
+
+.sectionText {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2d3748;
+  margin: 0 0 15px 0;
+}
+
+.itemList {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.listItem {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #2d3748;
+  padding-left: 25px;
+  position: relative;
+}
+
+.listItem::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #ef4036;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.listItem strong {
+  color: #1a1a1a;
+}
+
+.simpleList {
+  list-style: disc;
+  padding-left: 25px;
+  margin: 15px 0;
+  color: #2d3748;
+}
+
+.simpleList li {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+  margin: 25px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cookieTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+.cookieTable thead {
+  background: linear-gradient(135deg, #ef4036 0%, #7f2824 100%);
+}
+
+.cookieTable th {
+  padding: 15px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cookieTable tbody tr {
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.3s ease;
+}
+
+.cookieTable tbody tr:hover {
+  background-color: #f7fafc;
+}
+
+.cookieTable td {
+  padding: 15px;
+  font-size: 15px;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+.purposeCell {
+  font-weight: 600;
+  color: #1a202c;
+}
+
+.browserLinks {
+  margin-top: 25px;
+}
+
+.linkGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.browserLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 20px;
+  background: #f0f4ff;
+  color: #ef4036;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.browserLink:hover {
+  background: #e6edff;
+  border-color: #892b26;
+  transform: translateY(-2px);
+}
+
+.contactSection {
+  background: linear-gradient(135deg, #fff0f0 0%, #ffe6e6 100%);
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 4px solid #ef4036;
+}
+
+.contactEmail {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 24px;
+  background: #ef4036;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.contactEmail:hover {
+  background: #a52f29;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(44, 90, 160, 0.3);
+}
+
+.consentBox {
+  margin-top: 50px;
+  padding: 30px;
+  background: linear-gradient(135deg, #fcf5f5 0%, #fff5f5 100%);
+  border-radius: 12px;
+  border-left: 4px solid #f59e0b;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cookieIcon {
+  font-size: 40px;
+  flex-shrink: 0;
+}
+
+.consentText {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #78350f;
+  margin: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .policySection {
+    padding: 60px 20px;
+  }
+
+  .header {
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+  }
+
+  .mainTitle {
+    font-size: 32px;
+  }
+
+  .lastUpdated {
+    font-size: 14px;
+  }
+
+  .content {
+    padding: 30px 25px;
+  }
+
+  .section {
+    margin-bottom: 30px;
+  }
+
+  .sectionTitle {
+    font-size: 20px;
+  }
+
+  .sectionText {
+    font-size: 15px;
+  }
+
+  .listItem {
+    font-size: 15px;
+    padding-left: 20px;
+  }
+
+  .cookieTable {
+    font-size: 13px;
+  }
+
+  .cookieTable th,
+  .cookieTable td {
+    padding: 10px;
+  }
+
+  .linkGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .browserLink {
+    padding: 12px 18px;
+    font-size: 14px;
+  }
+
+  .contactSection {
+    padding: 25px 20px;
+  }
+
+  .contactEmail {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .consentBox {
+    padding: 25px 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cookieIcon {
+    font-size: 32px;
+  }
+
+  .consentText {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 28px;
+  }
+
+  .tableWrapper {
+    margin: 20px -25px;
+    border-radius: 0;
+  }
+}

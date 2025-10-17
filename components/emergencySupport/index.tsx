@@ -27,7 +27,7 @@ export default function EmergencyResponse() {
           </h3>
         </div>
 
-        <div className={styles.casesGrid}>
+        <div className={styles.casesGrid} id="cases">
           {emergencyCases.map((emergencyCase, index) => (
             <div key={index} className={styles.caseCard}>
               <div className={styles.imagePlaceholder}>

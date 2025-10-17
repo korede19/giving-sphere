@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./styles.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 const AboutComp = () => {
   return (
@@ -31,7 +32,9 @@ const AboutComp = () => {
           budget allocation over the years (International Budget Partnership,
           2023).
         </p>
-        <button>Learn More &rarr;</button>
+        <button>
+          <Link href="about">Learn More &rarr;</Link>
+        </button>
       </div>
     </div>
   );
