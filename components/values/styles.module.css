@@ -1,6 +1,6 @@
 .valuesSection {
   padding: 80px 20px;
-  background-color: #fdf5f5;
+  background-color: #f4f4f4;
 }
 
 .valuesContainer {
@@ -83,6 +83,7 @@
   font-size: 48px;
   margin-bottom: 20px;
   display: block;
+  color: #ef4036;
 }
 
 .valueTitle {

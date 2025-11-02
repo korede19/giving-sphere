@@ -4,10 +4,12 @@ import styles from "./styles.module.css";
 import Family from "@/svg/family";
 import Partner from "@/svg/partner";
 import Link from "next/link";
+import Communities from "@/svg/communities";
 
 export default function ScrollCounter() {
   const [familiesCount, setFamiliesCount] = useState(0);
   const [partnersCount, setPartnersCount] = useState(0);
+  const [communityCount, setCommunityCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const counterRef = useRef(null);
 
@@ -17,8 +19,9 @@ export default function ScrollCounter() {
         entries.forEach((entry) => {
           if (entry.isIntersecting && !hasAnimated) {
             setHasAnimated(true);
-            animateCounter(setFamiliesCount, 1000, 2000);
+            animateCounter(setFamiliesCount, 1500, 2000);
             animateCounter(setPartnersCount, 50, 2000);
+            animateCounter(setCommunityCount, 16, 1000);
           }
         });
       },
@@ -75,6 +78,14 @@ export default function ScrollCounter() {
               <span className={styles.plus}>+</span>
             </div>
             <div className={styles.counterLabel}>Our Partners</div>
+          </div>
+          <div className={styles.counterItem}>
+            <Communities />
+            <div className={styles.counterNumber}>
+              {communityCount}
+              <span className={styles.plus}>+</span>
+            </div>
+            <div className={styles.counterLabel}>Communities</div>
           </div>
         </div>
         <button className={styles.partnerBtn}>

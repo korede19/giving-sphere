@@ -15,9 +15,9 @@ const poppins = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Giving Sphere",
+  title: "Givingsphere",
   description:
-    "Giving Sphere is a platform that connects donors with charitable organizations.",
+    "Givingsphere is a platform that connects donors with charitable organizations.",
 };
 
 export default function RootLayout({

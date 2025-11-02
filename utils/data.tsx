@@ -1,14 +1,23 @@
+import Celebrate from "@/svg/celebrate";
+import Confidence from "@/svg/confidence";
+import Experience from "@/svg/experience";
+import Gift from "@/svg/gift";
+import Handshake from "@/svg/handshake";
+import Heart from "@/svg/heart";
+import Justice from "@/svg/justice";
+import Meet from "@/svg/meet";
+
 export const MenuLinks = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
   { title: "Our Work", href: "/our-work" },
-  { title: "News & Resources", href: "/news&resources" },
+  { title: "News & Updates", href: "/news&updates" },
   { title: "Get Involved", href: "/get-involved" },
 ];
 
 export const HeroImages = [
   { id: 1, src: "/assets/hero3.jpeg", alt: "Hero Image 1" },
-  { id: 2, src: "/assets/banner2.jpg", alt: "Hero Image 2" },
+  { id: 2, src: "/assets/about.jpg", alt: "Hero Image 2" },
   { id: 3, src: "/assets/banner3.jpg", alt: "Hero Image 3" },
 ];
 
@@ -17,25 +26,25 @@ export const values = [
     title: "Collaboration",
     description:
       "We foster a culture of teamwork and champion partnerships, recognizing that collective efforts yield greater results.",
-    icon: "🤝",
+    icon: <Handshake />,
   },
   {
     title: "Compassion",
     description:
       "We lead with kindness, prioritize our beneficiaries, and are committed to making a positive impact in their lives.",
-    icon: "💙",
+    icon: <Heart />,
   },
   {
     title: "Integrity",
     description:
       "We consistently uphold honesty and transparency, guided by ethical conduct in all our endeavors.",
-    icon: "⚖️",
+    icon: <Justice />,
   },
   {
     title: "Generosity",
     description:
       "We devote our efforts, time, and energy generously to the work we undertake.",
-    icon: "🎁",
+    icon: <Gift />,
   },
 ];
 
@@ -89,13 +98,13 @@ export const emergencyCases = [
     title: "Benue crisis (2024)",
     description:
       "Mobilized urgent relief support for displaced families and communities facing hardship partnering with trusted local organizations for timely assistance delivery.",
-    image: "/assets/benue.jpg",
+    image: "/assets/benuecrisis.jpeg",
   },
   {
     title: "Tarkwa bay evictees (2020)",
     description:
       "Provided emergency funds to aid displaced families facing sudden loss and instability following forced evictions in Tarkwa bay community.",
-    image: "/assets/bay.jpg",
+    image: "/assets/tarkwa.avif",
   },
   {
     title: "Justice for Uwa (2020)",
@@ -128,7 +137,7 @@ export const howItWorksSteps = [
     number: "3",
     title: "Impact",
     description:
-      "Funds are disbursed to cover urgent treatments, medical supplies, or hospital bills ensuring help gets to people, when it matters most.",
+      "Funds are disbursed to cover urgent treatments, medical supplies, or hospital bills, ensuring help gets to people who need it most.",
   },
 ];
 export const impactStories = [
@@ -209,10 +218,10 @@ export const outreachPrograms = [
 ];
 
 export const volunteerBenefits = [
-  { icon: "💼", text: "Gain valuable experience" },
-  { icon: "🤝", text: "Meet wonderful people" },
-  { icon: "💪", text: "Build your confidence" },
-  { icon: "🎉", text: "Have fun making a real difference" },
+  { icon: <Experience />, text: "Gain valuable experience" },
+  { icon: <Meet />, text: "Meet wonderful people" },
+  { icon: <Confidence />, text: "Build your confidence" },
+  { icon: <Celebrate />, text: "Have fun making a real difference" },
 ];
 
 export const partnershipTypes = [
@@ -224,7 +233,8 @@ export const partnershipTypes = [
 ];
 
 type NavItems = {
-  about: AboutNav;
+  about: SimpleNav;
+  ourWork: SimpleNav;
   getInvolved: SimpleNav;
 };
 
@@ -233,17 +243,6 @@ type NavLink = {
   description?: string;
   href: string;
   external?: boolean;
-};
-
-type NavSection = {
-  heading: string;
-  links: NavLink[];
-};
-
-type AboutNav = {
-  title: string;
-  sections: NavSection[];
-  link: string;
 };
 
 type SimpleNav = {
@@ -256,62 +255,23 @@ export const navItems: NavItems = {
   about: {
     title: "ABOUT",
     link: "/about",
-    sections: [
-      {
-        heading: "OUR SOLUTION",
-        links: [
-          { text: "Emergency Support", href: "/our-work/#emergency-support" },
-          { text: "The 1k helpline", href: "/our-work/#1k-support" },
-          {
-            text: "Health Equity & Financial Protection",
-            href: "/our-work/#health-equity",
-          },
-          {
-            text: "Community outreach & capacity building",
-            href: "/our-work/#outreach",
-          },
-        ],
-      },
-      {
-        heading: "EMMERGENCY RESPONSE & CRISIS SUPPORT",
-        links: [
-          { text: "Benue crisis (2024)", href: "/our-work/#cases" },
-          { text: "Tarkwa bay evictees (2020)", href: "/our-work/#cases" },
-          {
-            text: "Justice for Uwa (2020)",
-            href: "/our-work/#cases",
-          },
-          {
-            text: "Ita-Faaji building collapse (2019)",
-            href: "/our-work/#cases",
-          },
-        ],
-      },
-      {
-        heading: "OUR VALUES",
-        links: [
-          { text: "Collaboration", href: "/about/#values" },
-          { text: "Compassion", href: "/about/#values" },
-          {
-            text: "Integrity",
-            href: "/about/#values",
-          },
-          {
-            text: "Generosity",
-            href: "/about/#values",
-          },
-        ],
-      },
+    links: [
+      { text: "Our Solution", href: "#" },
+      { text: "Our Story", href: "#" },
+      { text: "Our Values", href: "#" },
+      { text: "Our Team", href: "#" },
     ],
   },
-  // ourWork: {
-  //   title: "OUR WORK",
-  //   links: [
-  //     { text: "The Issue", href: "/issue" },
-  //     { text: "Our Approach", href: "/approach" },
-  //     { text: "Impact Stories", href: "/stories" },
-  //   ],
-  // },
+  ourWork: {
+    title: "OUR WORK",
+    link: "/our-work",
+    links: [
+      { text: "Emergency response", href: "#" },
+      { text: "Medical support services (1K Helpline)", href: "#" },
+      { text: "Health equity & financial protection", href: "#" },
+      { text: "Community outreach and capacity building", href: "#" },
+    ],
+  },
   // resources: {
   //   title: "NEWS & RESOURCES",
   //   links: [
@@ -503,17 +463,17 @@ export const testimonials = [
   {
     type: "audio",
     title: "Patient Testimonial",
-    audioUrl: "/testimonial-audio.mp3",
-    author: "Beneficiary Family",
-    image: "/audio-bg.jpg",
+    audioUrl: "/audios/elizabeth.mp3",
+    author: "Elizabeth",
+    image: "#",
   },
   {
     type: "video",
     title: "Impact Story",
-    videoUrl: "/testimonial-video.mp4",
+    videoUrl: "/videos/video.MP4",
     thumbnail: "/video-thumbnail.jpg",
     author: "Community Member",
-    image: "/video-bg.jpg",
+    image: "#",
   },
 ];
 
@@ -529,7 +489,6 @@ export const newsItems = [
     image: "assets/hero1.jpg",
     date: "October, 2025",
     downloadUrl: "downloads/report.pdf",
-    fileSize: "200kb",
   },
   {
     id: 2,

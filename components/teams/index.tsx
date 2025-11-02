@@ -51,7 +51,7 @@ export default function TeamSlider() {
     <section className={styles.teamSection} id="teams">
       <div className={styles.teamContainer}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Our Team</h2>
+          <h2 className={styles.sectionTitle}>Our team</h2>
         </div>
 
         <div

@@ -1,24 +1,25 @@
 .contentContain {
-  background-color: #fff5f5;
+  background-color: #f4f4f4;
 }
 
 .container {
   max-width: 1400px;
   margin: 0 auto;
   padding: 60px 0px;
-  background-color: #fff5f5;
+  background-color: #f4f4f4;
 }
 
 .rowOne {
   display: flex;
   max-width: 800px;
   margin: 0 auto;
+  align-items: center;
   gap: 20px;
 }
 
 .colOne h2 {
-  font-size: 80px;
-  font-weight: 700;
+  font-size: 100px;
+  font-weight: 900;
   margin-bottom: 20px;
   color: #ef4036;
 }

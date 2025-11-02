@@ -15,7 +15,7 @@ export default function OurSolution() {
     <section className={styles.solutionSection}>
       <div className={styles.solutionContainer}>
         <div className={styles.sectionHeader}>
-          <h2 className={styles.sectionTitle}>Our Solution</h2>
+          <h2 className={styles.sectionTitle}>Our solution</h2>
         </div>
 
         <div className={styles.solutionsGrid}>

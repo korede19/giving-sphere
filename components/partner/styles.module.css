@@ -14,7 +14,7 @@
 }
 
 .partnerContainer {
-  background-color: #faf8f8;
+  background-color: #ededed;
 }
 
 .partnerSection {
@@ -31,7 +31,7 @@
 }
 
 .sectionTitle {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: bold;
   color: #212121;
   margin: 0;
@@ -82,6 +82,7 @@
 
 .benefitIcon {
   font-size: 28px;
+  color: #ef4036;
 }
 
 .benefitText {
@@ -102,7 +103,7 @@
   align-items: center;
   gap: 15px;
   padding: 20px 25px;
-  background: linear-gradient(135deg, #a23732 0%, #9a4743 100%);
+  background: linear-gradient(135deg, #ef4036 0%, #d63a31 100%);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(30, 58, 138, 0.2);
 }

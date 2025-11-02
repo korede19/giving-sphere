@@ -40,7 +40,7 @@ export default function OurValues() {
               isVisible ? styles.visible : ""
             }`}
           >
-            <h2 className={styles.sectionTitle}>Our Values</h2>
+            <h2 className={styles.sectionTitle}>Our values</h2>
             <p className={styles.sectionSubtitle}>What guides us every day</p>
           </div>
 

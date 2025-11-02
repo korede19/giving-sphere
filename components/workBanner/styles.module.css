@@ -1,5 +1,5 @@
 .container {
-  background-image: url("../../public/assets/ourGoals.jpg");
+  background-image: url("../../public/assets/ourwork.jpg");
   height: 50vh;
   background-size: cover;
   background-position: center center;
@@ -17,7 +17,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.473);
+  background-color: rgba(0, 0, 0, 0.53);
+}
+
+.special {
+  font-size: 25px;
+  color: #fff;
+  z-index: 999;
+  font-weight: 600;
+  font-style: italic;
 }
 
 .container h2 {

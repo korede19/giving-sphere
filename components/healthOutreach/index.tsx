@@ -31,7 +31,7 @@ export default function HealthEquityOutreach() {
                     {item.text}
                     {item.hasLink && (
                       <a href="/news&resources" className={styles.seeMoreLink}>
-                        See more →
+                        Read More →
                       </a>
                     )}
                   </p>

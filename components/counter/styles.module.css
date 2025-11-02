@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffe7e6;
+  background-color: #eaeaea;
   justify-content: center;
   padding: 40px 20px;
 }
@@ -18,7 +18,7 @@
 .counterContainer > h2 {
   text-align: center;
   color: #232323;
-  font-size: 60px;
+  font-size: 48px;
   margin-bottom: 20px;
   font-weight: 700;
 }

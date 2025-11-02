@@ -1,4 +1,6 @@
+import LinkedIn from "@/svg/linkedln";
 import styles from "./styles.module.css";
+import Instagram from "@/svg/instagram";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -20,11 +22,6 @@ export default function Footer() {
           <div className={styles.footerColumn}>
             <h3 className={styles.footerHeading}>Quick Links</h3>
             <ul className={styles.footerList}>
-              <li>
-                <a href="/about" className={styles.footerLink}>
-                  About
-                </a>
-              </li>
               <li>
                 <a href="/our-work" className={styles.footerLink}>
                   Our Work
@@ -75,9 +72,7 @@ export default function Footer() {
               <li className={styles.footerText}>
                 🎗️ Registered Charity no: 179000
               </li>
-              <li className={styles.footerText}>
-                📍 Ibadan, Oyo State, Nigeria
-              </li>
+              <li className={styles.footerText}>📍 Lagos State, Nigeria</li>
             </ul>
             <div className={styles.socialLinks}>
               <a
@@ -85,14 +80,14 @@ export default function Footer() {
                 className={styles.socialLink}
                 aria-label="Instagram"
               >
-                IG
+                <Instagram />
               </a>
               <a
                 href="https://www.linkedin.com/company/givingsphere-charity-foundation"
                 className={styles.socialLink}
                 aria-label="LinkedIn"
               >
-                LI
+                <LinkedIn />
               </a>
             </div>
           </div>
@@ -100,7 +95,7 @@ export default function Footer() {
 
         <div className={styles.footerBottom}>
           <p className={styles.copyright}>
-            © {currentYear} Giving Sphere. All rights reserved.
+            © {currentYear} Givingsphere. All rights reserved.
           </p>
           <div className={styles.footerBottomLinks}>
             <a href="/privacy-policy" className={styles.footerBottomLink}>

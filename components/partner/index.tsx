@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./styles.module.css";
 import { partnershipTypes, volunteerBenefits } from "@/utils/data";
 import Image from "next/image";
+import List from "@/svg/list";
 
 export default function VolunteerPartner() {
   const [copiedEmail, setCopiedEmail] = useState("");
@@ -67,7 +68,7 @@ export default function VolunteerPartner() {
 
               <div className={styles.imageSection}>
                 <Image
-                  src={"/assets/partner.png"}
+                  src={"/assets/volunteer.webp"}
                   alt="Volunteer"
                   width={300}
                   height={600}
@@ -89,7 +90,7 @@ export default function VolunteerPartner() {
           <div className={styles.contentGrid}>
             <div className={styles.imageSection}>
               <Image
-                src={"/assets/hero3.jpeg"}
+                src={"/assets/partner.jpeg"}
                 alt="Volunteer"
                 width={300}
                 height={300}
@@ -127,7 +128,9 @@ export default function VolunteerPartner() {
                 <ul className={styles.contributionsList}>
                   {partnershipTypes.map((type, index) => (
                     <li key={index} className={styles.contributionItem}>
-                      <span className={styles.checkmark}>✓</span>
+                      <span className={styles.checkmark}>
+                        <List />
+                      </span>
                       {type}
                     </li>
                   ))}

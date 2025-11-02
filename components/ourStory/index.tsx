@@ -7,7 +7,7 @@ const OurStory = () => {
     <div className={styles.section}>
       <div className={styles.container}>
         <div className={styles.colOne}>
-          <h2>Our Story</h2>
+          <h2>Our story</h2>
           <p>
             It all started in 2018, when a modest ₦17,000 saved the life of
             18-month-old Ismail, who was battling rhabdomyosarcoma of the face

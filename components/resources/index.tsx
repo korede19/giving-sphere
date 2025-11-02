@@ -15,7 +15,7 @@ export default function Resources() {
     <section className={styles.newsSection}>
       <div className={styles.container}>
         <div className={styles.header}>
-          <h2 className={styles.sectionTitle}>News & Resources</h2>
+          <h2 className={styles.sectionTitle}>News & updates</h2>
           <p className={styles.sectionSubtitle}>
             Stay updated with our latest news, reports, and publications
           </p>
@@ -36,7 +36,7 @@ export default function Resources() {
             }`}
             onClick={() => setActiveFilter("news")}
           >
-            News & Updates
+            News & updates
           </button>
           <button
             className={`${styles.filterBtn} ${
@@ -61,21 +61,12 @@ export default function Resources() {
               </div>
 
               <div className={styles.cardContent}>
-                <div className={styles.meta}>
-                  <span className={styles.date}>📅 {item.date}</span>
-                  {item.fileSize && (
-                    <span className={styles.fileSize}>📄 {item.fileSize}</span>
-                  )}
-                </div>
+                <div className={styles.meta}></div>
 
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <p className={styles.cardDescription}>{item.description}</p>
 
-                {item.type === "news" ? (
-                  <a href={item.link} className={styles.readMoreBtn}>
-                    Read More →
-                  </a>
-                ) : (
+                {item.type === "news" ? null : (
                   <a
                     href={item.downloadUrl}
                     className={styles.downloadBtn}

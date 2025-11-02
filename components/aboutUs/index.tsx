@@ -15,7 +15,7 @@ const AboutComp = () => {
         />
       </div>
       <div className={styles.colTwo}>
-        <h2>About Us</h2>
+        <h2>About us</h2>
         <p>
           70% of healthcare costs are paid out-of-pocket, pushing millions into
           poverty (WHO).
