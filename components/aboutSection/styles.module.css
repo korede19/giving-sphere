@@ -36,5 +36,31 @@
   padding: 1% 0px;
   font-size: 16px;
   line-height: 1.6;
-  color: #333333;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 40px 20px;
+    text-align: left;
+  }
+
+  .container p {
+    text-align: left;
+  }
+
+  .rowOne {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .colOne h2 {
+    font-size: 80px;
+    margin: 0px;
+  }
+
+  .colTwo h2 {
+    font-size: 30px;
+  }
 }

@@ -24,13 +24,13 @@
 .sectionTitle {
   font-size: 48px;
   font-weight: bold;
-  color: #2d3748;
+  color: #000000;
   margin-bottom: 10px;
 }
 
 .sectionSubtitle {
   font-size: 16px;
-  color: #3a3a3a;
+  color: #000000;
   font-weight: 400;
 }
 
@@ -89,13 +89,13 @@
 .valueTitle {
   font-size: 28px;
   font-weight: bold;
-  color: #2d3748;
+  color: #000000;
   margin-bottom: 15px;
 }
 
 .valueDescription {
   font-size: 16px;
-  color: #4a5568;
+  color: #000000;
   line-height: 1.6;
 }
 

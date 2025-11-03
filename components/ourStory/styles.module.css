@@ -45,3 +45,34 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 40px 20px;
+    flex-direction: column-reverse;
+  }
+
+  .container > p {
+    text-align: left;
+  }
+
+  .colOne,
+  .colTwo {
+    width: 100%;
+    padding: 0px 0px 30px 0px;
+  }
+
+  .colOne h2 {
+    font-size: 36px;
+  }
+
+  .colOne p {
+    width: 100%;
+    text-align: left;
+  }
+
+  .colTwo {
+    margin-top: 30px;
+  }
+}

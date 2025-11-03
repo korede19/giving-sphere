@@ -85,7 +85,9 @@ export default function ScrollCounter() {
               {communityCount}
               <span className={styles.plus}>+</span>
             </div>
-            <div className={styles.counterLabel}>Communities</div>
+            <div className={styles.counterLabel}>
+              Communities across 5 states
+            </div>
           </div>
         </div>
         <button className={styles.partnerBtn}>

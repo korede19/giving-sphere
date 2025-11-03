@@ -8,9 +8,9 @@
 }
 
 .counterWrapper {
-  display: flex;
-  gap: 80px;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 2fr 2fr 2fr;
   justify-content: center;
   max-width: 1400px;
 }
@@ -40,7 +40,9 @@
 }
 
 .counterLabel {
-  font-size: 16px;
+  font-size: 14px;
+  width: 200px;
+  margin: 0 auto;
   color: #232323;
   font-weight: 500;
   text-transform: uppercase;
@@ -64,18 +66,22 @@
 
 @media (max-width: 768px) {
   .counterWrapper {
-    gap: 40px;
+    gap: 20px;
+    grid-template-columns: 2fr 2fr;
   }
-
   .counterItem {
-    padding: 30px 40px;
+    padding: 0px;
   }
 
+  .counterContainer > h2 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
   .counterNumber {
-    font-size: 48px;
+    font-size: 35px;
   }
 
   .counterLabel {
-    font-size: 16px;
+    font-size: 12px;
   }
 }

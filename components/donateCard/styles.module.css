@@ -236,8 +236,13 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .donateCard {
+    margin: 0px;
+  }
+
   .container {
     padding: 24px;
+    margin: 0px;
   }
 
   .content {

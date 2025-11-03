@@ -23,6 +23,7 @@
 .logo {
   display: flex;
   align-items: center;
+  z-index: 1001;
 }
 
 .logo a {
@@ -283,6 +284,134 @@
   gap: 10px;
 }
 
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburgerLine {
+  width: 100%;
+  height: 3px;
+  background-color: #1a202c;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.hamburgerLine.open:nth-child(1) {
+  transform: translateY(10.5px) rotate(45deg);
+}
+
+.hamburgerLine.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerLine.open:nth-child(3) {
+  transform: translateY(-10.5px) rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobileMenu {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.mobileMenuOpen {
+  transform: translateX(0);
+}
+
+.mobileNav {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobileNavItem {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a202c;
+  text-decoration: none;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.mobileNavLink a {
+  flex: 1;
+  color: inherit;
+  text-decoration: none;
+}
+
+.mobileArrow {
+  font-size: 10px;
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+.mobileArrowOpen {
+  transform: rotate(180deg);
+}
+
+.mobileDropdownList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #f8f9fa;
+}
+
+.mobileDropdownLink {
+  display: block;
+  padding: 14px 20px;
+  color: #2d3748;
+  text-decoration: none;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.2s ease;
+}
+
+.mobileDropdownLink:hover {
+  background-color: #e2e8f0;
+  color: #ef4036;
+}
+
+.mobileDonateWrapper {
+  padding: 20px 10px;
+  margin-top: 10px;
+}
+
+.mobileDonateWrapper .donateButton {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -317,11 +446,29 @@
     grid-column: 1 / -1;
     width: 100%;
   }
+
+  /* Hide desktop nav on tablet */
+  .nav {
+    display: none;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }
 
 @media (max-width: 768px) {
   .headerContainer {
     height: 70px;
+    padding: 0 16px;
+  }
+
+  .mobileMenu {
+    top: 70px;
   }
 
   .logoText {
@@ -332,8 +479,25 @@
     font-size: 12px;
   }
 
-  .donateButton {
-    padding: 10px 24px;
-    font-size: 12px;
+  .nav {
+    display: none;
+  }
+
+  .actions {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .mobileNavLink {
+    font-size: 15px;
+    padding: 16px 8px;
+  }
+
+  .mobileDropdownLink {
+    padding: 12px 16px;
+    font-size: 13px;
   }
 }

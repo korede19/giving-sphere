@@ -21,13 +21,6 @@ export default function OurSolution() {
         <div className={styles.solutionsGrid}>
           {solutions.map((solution, index) => (
             <div key={index} className={styles.solutionCard}>
-              <Image
-                src={solution.image}
-                width={200}
-                height={200}
-                alt="icon"
-                className={styles.imageIcon}
-              />
               <div className={styles.cardHeader}>
                 <h3 className={styles.cardTitle}>{solution.title}</h3>
               </div>
@@ -47,6 +40,18 @@ export default function OurSolution() {
             </div>
           ))}
         </div>
+      </div>
+      <div className={styles.cardFooter}>
+        {solutions.map((solution, index) => (
+          <Image
+            key={index}
+            src={solution.image}
+            width={200}
+            height={200}
+            alt="icon"
+            className={styles.imageIcon}
+          />
+        ))}
       </div>
     </section>
   );

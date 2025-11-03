@@ -43,8 +43,7 @@ export default function VolunteerPartner() {
                 </div>
 
                 <p className={styles.welcomeText}>
-                  We welcome people from all walks of life. To volunteer, kindly
-                  send your expression of interest to:
+                  To volunteer, kindly send your expression of interest to:
                 </p>
 
                 <div className={styles.contactBox}>

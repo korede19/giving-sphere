@@ -19,7 +19,7 @@
 .sectionTitle {
   font-size: 48px;
   font-weight: bold;
-  color: #323232;
+  color: #000000;
   margin: 0;
   text-align: center;
 }
@@ -86,13 +86,13 @@
 .memberName {
   font-size: 25px;
   font-weight: bold;
-  color: #1a202c;
+  color: #000000;
   margin: 0 0 8px 0;
 }
 
 .memberRole {
   font-size: 15px;
-  color: #718096;
+  color: #000000;
   margin: 0;
   line-height: 1.4;
 }

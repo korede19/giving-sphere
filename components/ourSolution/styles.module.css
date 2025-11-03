@@ -21,7 +21,7 @@
 .sectionTitle {
   font-size: 48px;
   font-weight: bold;
-  color: #0f0f0f;
+  color: #000000;
   margin: 0;
 }
 
@@ -76,7 +76,7 @@
 
 .previewText {
   font-size: 15px;
-  color: #4a5568;
+  color: #000000;
   line-height: 1.6;
   margin: 0;
   transition: all 0.3s ease;
@@ -102,6 +102,15 @@
 
 .readMoreButton:active {
   transform: translateX(3px);
+}
+
+.cardFooter {
+  max-width: 500px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  align-items: center;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {

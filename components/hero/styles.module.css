@@ -5,7 +5,6 @@
   overflow: hidden;
 }
 
-/* ✅ Swiper fills the hero container */
 .backgroundSlider {
   position: absolute;
   top: 0;
@@ -52,7 +51,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 0 60px; */
+  padding: 0 60px;
 }
 
 /* ✅ Two-column layout */
@@ -63,7 +62,7 @@
   display: grid;
   grid-template-columns: 2fr 2fr;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 /* LEFT COLUMN */
@@ -91,26 +90,45 @@
   display: flex;
   gap: 20px;
   margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.btnOne,
+.btnTwo {
+  padding: 15px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 .btnOne {
   background-color: #ffc239;
   color: black;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 15px;
+  border: 2px solid #ffc239;
+}
+
+.btnOne:hover {
+  background-color: #e6af32;
+  transform: translateY(-2px);
+}
+
+.btnOne a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .btnTwo {
   background: transparent;
   color: white;
-  border: 1px solid white;
-  padding: 15px 30px;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 15px;
+  border: 2px solid white;
+}
+
+.btnTwo:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
 }
 
 /* RIGHT COLUMN */
@@ -120,23 +138,31 @@
   justify-self: end;
 }
 
-/* ✅ Responsive */
+/* ✅ Tablet Responsive (992px and below) */
 @media (max-width: 992px) {
-  .heroContent {
-    grid-template-columns: 1fr;
-    text-align: center;
+  .heroContainer {
+    height: auto;
+    min-height: 700px;
   }
 
   .heroOverlay {
-    padding: 0 20px;
+    padding: 60px 30px;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
   }
 
   .heroText h1 {
-    font-size: 36px;
+    font-size: 60px;
+    margin: 0 auto;
   }
 
   .heroText p {
-    font-size: 16px;
+    font-size: 17px;
+    margin: 0 auto;
   }
 
   .heroBtn {
@@ -145,5 +171,115 @@
 
   .donateComponent {
     justify-self: center;
+  }
+}
+
+/* ✅ Mobile Responsive (768px and below) */
+@media (max-width: 768px) {
+  .heroContainer {
+    height: auto;
+    min-height: 700px;
+  }
+
+  .heroOverlay {
+    padding: 60px 20px;
+  }
+
+  .heroContent {
+    gap: 30px;
+  }
+
+  .heroText {
+    gap: 16px;
+  }
+
+  .heroText h1 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .heroText p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .heroBtn {
+    gap: 12px;
+    margin-top: 8px;
+  }
+
+  .btnOne,
+  .btnTwo {
+    padding: 14px 26px;
+    font-size: 14px;
+  }
+}
+
+/* ✅ Small Mobile (576px and below) */
+@media (max-width: 576px) {
+  .heroContainer {
+    min-height: 700px;
+  }
+
+  .heroOverlay {
+    padding: 60px 16px;
+  }
+
+  .heroContent {
+    gap: 24px;
+  }
+
+  .heroText {
+    gap: 14px;
+  }
+
+  .heroText h1 {
+    font-size: 40px;
+    line-height: 1.2;
+  }
+
+  .heroText p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .heroBtn {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .btnOne,
+  .btnTwo {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+
+  /* Disable zoom animation on mobile for better performance */
+  .imageBackground {
+    animation: none;
+    transform: scale(1);
+  }
+}
+
+/* ✅ Extra Small Mobile (400px and below) */
+@media (max-width: 400px) {
+  .heroContainer {
+    min-height: 700px;
+  }
+
+  .heroText h1 {
+    font-size: 40px;
+  }
+
+  .heroText p {
+    font-size: 14px;
+  }
+
+  .btnOne,
+  .btnTwo {
+    font-size: 13px;
+    padding: 12px 18px;
   }
 }

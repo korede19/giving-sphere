@@ -234,6 +234,10 @@
     padding: 60px 20px;
   }
 
+  .volunteerSection {
+    flex-direction: column-reverse;
+  }
+
   .sectionHeader {
     flex-direction: column;
     gap: 10px;

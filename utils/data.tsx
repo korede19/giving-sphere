@@ -230,6 +230,7 @@ export const partnershipTypes = [
   "In-kind donations",
   "Employee engagement",
   "Multi-year strategic collaborations",
+  "Fund a campaign",
 ];
 
 type NavItems = {
