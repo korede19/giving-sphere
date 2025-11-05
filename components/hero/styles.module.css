@@ -29,7 +29,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.618);
   z-index: 2;
 }
 
@@ -222,7 +222,7 @@
   }
 
   .heroOverlay {
-    padding: 60px 16px;
+    padding: 60px 20px;
   }
 
   .heroContent {

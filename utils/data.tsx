@@ -19,6 +19,7 @@ export const HeroImages = [
   { id: 1, src: "/assets/hero3.jpeg", alt: "Hero Image 1" },
   { id: 2, src: "/assets/about.jpg", alt: "Hero Image 2" },
   { id: 3, src: "/assets/banner3.jpg", alt: "Hero Image 3" },
+  { id: 4, src: "/assets/Imagefour.jpg", alt: "Hero Image 4" },
 ];
 
 export const values = [
@@ -257,20 +258,29 @@ export const navItems: NavItems = {
     title: "ABOUT",
     link: "/about",
     links: [
-      { text: "Our Solution", href: "#" },
-      { text: "Our Story", href: "#" },
-      { text: "Our Values", href: "#" },
-      { text: "Our Team", href: "#" },
+      { text: "Our solution", href: "/about/#solution" },
+      { text: "Our story", href: "/about/#story" },
+      { text: "Our values", href: "/about/#values" },
+      { text: "Our team", href: "/about/#teams" },
     ],
   },
   ourWork: {
     title: "OUR WORK",
     link: "/our-work",
     links: [
-      { text: "Emergency response", href: "#" },
-      { text: "Medical support services (1K Helpline)", href: "#" },
-      { text: "Health equity & financial protection", href: "#" },
-      { text: "Community outreach and capacity building", href: "#" },
+      { text: "Emergency response", href: "/our-work/#emergency-support" },
+      {
+        text: "Medical support services (1K Helpline)",
+        href: "/our-work/#medical-support",
+      },
+      {
+        text: "Health equity & financial protection",
+        href: "/our-work/#health-equity",
+      },
+      {
+        text: "Community outreach and capacity building",
+        href: "/our-work/#outreach",
+      },
     ],
   },
   // resources: {

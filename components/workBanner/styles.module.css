@@ -1,6 +1,6 @@
 .container {
-  background-image: url("../../public/assets/ourwork.jpg");
-  height: 50vh;
+  background-image: url("../../public/assets/imageThre.jpg");
+  height: 60vh;
   background-size: cover;
   background-position: center center;
   display: flex;
@@ -21,7 +21,7 @@
 }
 
 .special {
-  font-size: 25px;
+  font-size: 22px;
   color: #fff;
   z-index: 999;
   font-weight: 600;

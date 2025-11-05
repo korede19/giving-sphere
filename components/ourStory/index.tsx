@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const OurStory = () => {
   return (
-    <div className={styles.section}>
+    <div className={styles.section} id="story">
       <div className={styles.container}>
         <div className={styles.colOne}>
           <h2>Our story</h2>

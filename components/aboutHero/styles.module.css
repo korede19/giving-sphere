@@ -1,8 +1,8 @@
 .container {
-  background-image: url("../../public/assets/about2.jpg");
-  height: 40vh;
+  background-image: url("../../public/assets/imageOne.jpg");
+  height: 50vh;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center center;
   display: flex;
   justify-content: center;
   align-items: center;

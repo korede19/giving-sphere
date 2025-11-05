@@ -38,7 +38,7 @@ const HeroSection = () => {
       <div className={styles.heroOverlay}>
         <div className={styles.heroContent}>
           <div className={styles.heroText}>
-            <h1>Breaking poverty barriers, Restoring health</h1>
+            <h1>Breaking poverty barriers, restoring health</h1>
             <p>
               We are on a mission to break barriers of poverty by facilitating
               equitable access to healthcare and reducing out-of-pocket expenses

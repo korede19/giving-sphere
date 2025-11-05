@@ -12,7 +12,7 @@ export default function OurSolution() {
   };
 
   return (
-    <section className={styles.solutionSection}>
+    <section className={styles.solutionSection} id="solution">
       <div className={styles.solutionContainer}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>Our solution</h2>

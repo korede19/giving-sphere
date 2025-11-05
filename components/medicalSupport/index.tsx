@@ -24,7 +24,7 @@ export default function MedicalSupport() {
   };
 
   return (
-    <section className={styles.medicalSection} id="1k-support">
+    <section className={styles.medicalSection} id="medical-support">
       <div className={styles.medicalContainer}>
         <div className={styles.sectionHeader}>
           <h2 className={styles.sectionTitle}>
@@ -60,13 +60,9 @@ export default function MedicalSupport() {
             Hear from our impacted families:
           </h3>
           <div className={styles.videoPlaceholder}>
-            <div className={styles.playIcon}>▶</div>
-            <p className={styles.videoText}>
-              Video/Audio Testimonial Placeholder
-            </p>
-            <p className={styles.videoSubtext}>
-              Insert your video or audio player here
-            </p>
+            <video controls className={styles.video}>
+              <source src="/videos/video.MP4" type="video/mp4" />
+            </video>
           </div>
         </div>
 

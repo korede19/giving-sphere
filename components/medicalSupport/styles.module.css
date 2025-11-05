@@ -104,14 +104,19 @@
 
 .videoPlaceholder {
   background: linear-gradient(135deg, #ef4036 0%, #842c28 100%);
-  border-radius: 16px;
-  padding: 80px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 500px;
+  max-height: 500px;
+  border-radius: 12px;
+}
+
+.video {
+  max-height: 500px;
+  width: 100%;
+  border-radius: 12px;
 }
 
 .playIcon {
