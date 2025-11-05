@@ -1,6 +1,9 @@
 import LinkedIn from "@/svg/linkedln";
 import styles from "./styles.module.css";
 import Instagram from "@/svg/instagram";
+import Mail from "@/svg/mail";
+import Charity from "@/svg/charity";
+import Location from "@/svg/location";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -67,12 +70,14 @@ export default function Footer() {
             <h3 className={styles.footerHeading}>Get In Touch</h3>
             <ul className={styles.footerList}>
               <li className={styles.footerText}>
-                📧 info@givingspherecharity.org
+                <Mail /> info@givingspherecharity.org
               </li>
               <li className={styles.footerText}>
-                🎗️ Registered Charity no: 179000
+                <Charity /> Registered Charity no: 179000
               </li>
-              <li className={styles.footerText}>📍 Lagos State, Nigeria</li>
+              <li className={styles.footerText}>
+                <Location /> Lagos State, Nigeria
+              </li>
             </ul>
             <div className={styles.socialLinks}>
               <a

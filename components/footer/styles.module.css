@@ -24,11 +24,13 @@
 .footerHeading {
   font-size: 25px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   color: #232323;
 }
 
 .footerText {
+  display: flex;
+  gap: 10px;
   font-size: 15px;
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.8);
