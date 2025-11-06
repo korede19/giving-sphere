@@ -113,8 +113,6 @@
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
 }
-
-/* Audio Testimonial */
 .audioTestimonial {
   text-align: center;
   background: rgba(255, 255, 255, 0.95);
@@ -162,7 +160,6 @@
   font-style: italic;
 }
 
-/* Video Testimonial */
 .videoTestimonial {
   width: 100%;
   max-width: 900px;
@@ -329,6 +326,9 @@
   .prevButton {
     left: 5px;
   }
+  .overlay {
+    height: 60%;
+  }
 
   .nextButton {
     right: 5px;
@@ -355,6 +355,10 @@
   .audioTestimonial,
   .videoTestimonial {
     padding: 25px 20px;
+  }
+
+  .overlay {
+    width: 60%;
   }
 
   .mediaTitle {

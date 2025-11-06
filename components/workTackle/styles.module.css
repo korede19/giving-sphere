@@ -16,7 +16,7 @@
 .blockquote {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 10px;
   margin: 0;
 }
 
@@ -37,7 +37,6 @@
   margin: 0;
 }
 
-/* Mobile Responsive */
 @media (max-width: 768px) {
   .section {
     padding: 60px 20px;
@@ -52,14 +51,13 @@
   }
 
   .subQuote {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
-/* Small Mobile */
 @media (max-width: 576px) {
   .section {
-    padding: 48px 16px;
+    padding: 48px 20px;
   }
 
   .borderAccent {
@@ -72,11 +70,10 @@
   }
 
   .subQuote {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
-/* Extra Small Mobile */
 @media (max-width: 400px) {
   .borderAccent {
     padding-left: 20px;

@@ -276,8 +276,12 @@
   }
 
   .videoPlaceholder {
-    padding: 60px 30px;
+    padding: 0px;
     min-height: 300px;
+  }
+
+  .video {
+    max-height: 300px;
   }
 
   .playIcon {
