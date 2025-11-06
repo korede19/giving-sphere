@@ -12,12 +12,12 @@
 }
 
 .headerContainer {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   height: 80px;
+  /* align-items: center; */
 }
 
 .logo {
@@ -133,7 +133,6 @@
 
 .dropdownLink {
   display: flex;
-  align-items: center;
   gap: 5px;
   padding: 10px 20px;
   color: #2d3748;
@@ -233,22 +232,23 @@
 }
 
 .donateButton {
-  padding: 12px 32px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 35px;
   background-color: #ef4036;
   color: #ffffff;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 1px;
   text-decoration: none;
-  border-radius: 4px;
   transition: all 0.3s ease;
   border: none;
   cursor: pointer;
 }
 
 .donateButton:hover {
-  background-color: #b5544e;
-  transform: translateY(-2px);
+  background-color: #bf645f;
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
@@ -465,6 +465,7 @@
   .headerContainer {
     height: 70px;
     padding: 0 16px;
+    align-items: center;
   }
 
   .mobileMenu {

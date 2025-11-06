@@ -67,9 +67,7 @@ export default function TestimonialCarousel() {
                 }`}
                 style={{
                   backgroundImage:
-                    testimonial.type !== "video"
-                      ? `url(${testimonial.image})`
-                      : "none",
+                    testimonial.type !== "video" ? `null` : "none",
                   display: currentIndex === index ? "flex" : "none",
                 }}
               >

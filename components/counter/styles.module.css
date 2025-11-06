@@ -12,7 +12,7 @@
   gap: 30px;
   grid-template-columns: 2fr 2fr 2fr;
   justify-content: center;
-  max-width: 1400px;
+  max-width: 1200px;
 }
 
 .counterContainer > h2 {

@@ -65,32 +65,29 @@ export const solutions = [
     image: "/assets/nopoverty.png",
     title: "Emergency response & crisis support",
     preview:
-      "Providing rapid aid to communities affected by conflict and displacement.",
-    fullText:
-      "When a crisis occurs, we provide rapid aid to communities affected by conflict, displacement, or sudden health crises.",
+      "Providing rapid aid to communities affected by conflict and displacement. When a crisis occurs, we provide rapid aid to communities affected by conflict, displacement, or sudden health crises.",
+    link: "/our-work/#emergency-support",
   },
   {
     image: "/assets/goodhealth.png",
     title: "Medical support services (The 1K helpline)",
     preview:
-      "Supporting patients at risk who struggle with out-of-pocket payments.",
-    fullText:
-      "Since its inception in 2018, our 1K Helpline initiative has been supporting patients at risk who struggle with out-of-pocket payments. The name \"1K\" denotes one thousand Naira, often seen as 'pocket change' by many working-class Nigerians showing how small contributions can make a big difference.",
+      "Supporting patients at risk who struggle with out-of-pocket payments. Since its inception in 2018, our 1K Helpline initiative has been supporting patients at risk who struggle with out-of-pocket payments. The name \"1K\" denotes one thousand Naira, often seen as 'pocket change' by many working-class Nigerians showing how small contributions can make a big difference.",
+    link: "/our-work/#medical-support",
   },
   {
     image: "/assets/inequalities.png",
     title: "Health equity & financial protection",
     preview:
-      "Tackling out-of-pocket payments through advocacy and collaboration.",
-    fullText:
-      "Through advocacy and collaboration with the Nigerian national bodies we aim to tackle the reliance on out-of-pocket payments and increase financial protection. For example, through the National Health Insurance Scheme (NHIS).",
+      "Tackling out-of-pocket payments through advocacy and collaboration. Through advocacy and collaboration with the Nigerian national bodies we aim to tackle the reliance on out-of-pocket payments and increase financial protection. For example, through the National Health Insurance Scheme (NHIS).",
+    link: "/our-work/#health-equity",
   },
   {
     image: "/assets/partnership.png",
     title: "Community outreach & capacity building",
-    preview: "Running awareness campaigns and training for healthcare workers.",
-    fullText:
-      "We run awareness campaigns, digital registration drives for health insurance, training for public healthcare workers, and community-led health education.",
+    preview:
+      "Running awareness campaigns and training for healthcare workers. We run awareness campaigns, digital registration drives for health insurance, training for public healthcare workers, and community-led health education.",
+    link: "/our-work/#outreach",
   },
 ];
 
@@ -454,14 +451,12 @@ export const testimonials = [
     quote:
       "Thank you GivingSphere, for supporting us financially. May God continue to bless you.",
     author: "Beneficiary",
-    image: "/testimonial-bg-1.jpg",
   },
   {
     type: "text",
     quote:
       "Thank you very much. May God bless you. I am very, very happy. I have come to say thank you...",
     author: "Father of 4-year-old",
-    image: "/testimonial-bg-2.jpg",
   },
   {
     type: "text",
@@ -469,14 +464,12 @@ export const testimonials = [
       "I am overwhelmed. It is just wonderful to have GivingSphere come. Every child and parent appreciate what you are doing. I pray and hope that you continue to give.",
     author: "Dr. Nneka",
     role: "Healthcare Professional",
-    image: "/testimonial-bg-3.jpg",
   },
   {
     type: "audio",
     title: "Patient Testimonial",
     audioUrl: "/audios/elizabeth.mp3",
     author: "Elizabeth",
-    image: "#",
   },
   {
     type: "video",
@@ -484,7 +477,6 @@ export const testimonials = [
     videoUrl: "/videos/video.MP4",
     thumbnail: "/video-thumbnail.jpg",
     author: "Community Member",
-    image: "#",
   },
 ];
 

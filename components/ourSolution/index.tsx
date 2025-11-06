@@ -1,16 +1,10 @@
 "use client";
-import { useState } from "react";
 import styles from "./styles.module.css";
 import { solutions } from "@/utils/data";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function OurSolution() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleDropdown = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
     <section className={styles.solutionSection} id="solution">
       <div className={styles.solutionContainer}>
@@ -26,16 +20,11 @@ export default function OurSolution() {
               </div>
 
               <div className={styles.cardBody}>
-                <p className={styles.previewText}>
-                  {openIndex === index ? solution.fullText : solution.preview}
-                </p>
+                <p className={styles.previewText}>{solution.preview}</p>
               </div>
 
-              <button
-                className={styles.readMoreButton}
-                onClick={() => toggleDropdown(index)}
-              >
-                {openIndex === index ? "Read less" : "Read more"}
+              <button className={styles.readMoreButton}>
+                <Link href={solution.link}>Learn more</Link>
               </button>
             </div>
           ))}

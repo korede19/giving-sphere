@@ -30,7 +30,7 @@ export default function VolunteerPartner() {
                   We rely on the generosity and talents of people like you.
                   Whether it&apos;s contributing your skills, lending a hand at
                   our outreaches, or supporting our team, every effort brings us
-                  closer to reaching more children in need.
+                  closer to reaching more families in need.
                 </p>
 
                 <div className={styles.benefitsGrid}>

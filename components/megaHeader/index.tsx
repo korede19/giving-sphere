@@ -4,6 +4,7 @@ import styles from "./styles.module.css";
 import Link from "next/link";
 import { navItems } from "@/utils/data";
 import Image from "next/image";
+import DonateModal from "../popup";
 
 interface NavLink {
   href: string;
@@ -100,9 +101,7 @@ export default function MegaHeader() {
         </nav>
 
         <div className={styles.actions}>
-          <a href="/donate" className={styles.donateButton}>
-            DONATE
-          </a>
+          <DonateModal />
         </div>
 
         {/* Hamburger Menu Button */}
@@ -183,13 +182,7 @@ export default function MegaHeader() {
           </div>
 
           <div className={styles.mobileDonateWrapper}>
-            <a
-              href="/donate"
-              className={styles.donateButton}
-              onClick={toggleMobileMenu}
-            >
-              DONATE
-            </a>
+            <DonateModal />
           </div>
         </nav>
       </div>

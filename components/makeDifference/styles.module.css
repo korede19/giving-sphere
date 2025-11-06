@@ -1,0 +1,68 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ctaSection {
+  margin: 30px 0px;
+}
+
+.ctaCard {
+  background: linear-gradient(135deg, #ef4036 0%, #802828 100%);
+  padding: 50px 40px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(30, 58, 138, 0.3);
+}
+
+.ctaTitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 15px 0;
+}
+
+.ctaText {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 30px 0;
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: #ffffff;
+  color: #ef4036;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ctaButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  background-color: #f7fafc;
+}
+
+@media screen and (max-width: 768px) {
+  .ctaCard {
+    padding: 40px 30px;
+  }
+
+  .ctaTitle {
+    font-size: 26px;
+  }
+
+  .ctaText {
+    font-size: 16px;
+  }
+
+  .ctaButton {
+    padding: 14px 35px;
+    font-size: 15px;
+  }
+}
