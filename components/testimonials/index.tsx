@@ -17,7 +17,7 @@ export default function TestimonialCarousel() {
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [isPaused, testimonials.length]);
+  }, [isPaused]);
 
   const goToSlide = (index: number) => {
     setCurrentIndex(index);
@@ -111,7 +111,6 @@ export default function TestimonialCarousel() {
                         <video
                           controls
                           className={styles.videoPlayer}
-                          poster={testimonial.thumbnail}
                           src={testimonial.videoUrl}
                         >
                           Your browser does not support the video element.
