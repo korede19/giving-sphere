@@ -8,26 +8,13 @@ import {
 } from "@/lib/supabase";
 
 export async function POST(request: Request) {
-  console.log("=== 🚀 VERIFY PAYMENT API CALLED ===");
-  console.log("Timestamp:", new Date().toISOString());
-  console.log("📋 Environment Check:");
-  console.log("- NODE_ENV:", process.env.NODE_ENV);
-  console.log(
-    "- PAYSTACK_SECRET_KEY exists:",
-    !!process.env.PAYSTACK_SECRET_KEY
-  );
-  console.log(
-    "- PAYSTACK_SECRET_KEY length:",
-    process.env.PAYSTACK_SECRET_KEY?.length || 0
-  );
-  console.log(
-    "- SUPABASE_SERVICE_ROLE_KEY exists:",
-    !!process.env.SUPABASE_SERVICE_ROLE_KEY
-  );
-  console.log(
-    "- NEXT_PUBLIC_SUPABASE_URL:",
-    process.env.NEXT_PUBLIC_SUPABASE_URL
-  );
+  // Only log in development
+  const isDev = process.env.NODE_ENV === "development";
+
+  if (isDev) {
+    console.log("=== 🚀 VERIFY PAYMENT API CALLED ===");
+    console.log("Timestamp:", new Date().toISOString());
+  }
 
   try {
     const body = await request.json();
@@ -116,17 +103,18 @@ export async function POST(request: Request) {
       domain: domain,
     });
 
-    // In production, reject test transactions
-    if (process.env.NODE_ENV === "production" && domain === "test") {
-      console.warn("⚠️ Test transaction attempted in production:", reference);
-      return NextResponse.json(
-        {
-          status: "error",
-          message: "Test transactions are not allowed in production",
-        },
-        { status: 400 }
-      );
-    }
+    // if (process.env.NODE_ENV === "production" && domain === "test") {
+    //   console.warn("⚠️ Test transaction attempted in production:", reference);
+    //   return NextResponse.json(
+    //     {
+    //       status: "error",
+    //       message: "Test transactions are not allowed in production",
+    //     },
+    //     { status: 400 }
+    //   );
+    // }
+
+    console.log("ℹ️ Processing transaction in domain:", domain);
 
     // Validate minimum amount
     if (verifiedAmount < 100) {

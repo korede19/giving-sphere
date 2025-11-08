@@ -475,7 +475,6 @@ export const testimonials = [
     type: "video",
     title: "Impact Story",
     videoUrl: "/videos/video.MP4",
-    thumbnail: "/video-thumbnail.jpg",
     author: "Community Member",
   },
 ];

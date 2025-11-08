@@ -86,12 +86,6 @@ const DonateCard: React.FC<DonateCardProps> = ({
     const loadingToast = toast.loading("Verifying payment...");
 
     try {
-      console.log("🔍 Sending verification request:", {
-        reference: reference.reference,
-        donationType: donationAmount,
-        dedication: dedication,
-      });
-
       const verifyResponse = await fetch("/api/verify-payment", {
         method: "POST",
         headers: {
@@ -104,21 +98,12 @@ const DonateCard: React.FC<DonateCardProps> = ({
         }),
       });
 
-      console.log("📡 Response status:", verifyResponse.status);
-      console.log("📡 Response headers:", verifyResponse.headers);
-
-      // Get the response text first
       const responseText = await verifyResponse.text();
-      console.log("📄 Response text:", responseText);
 
-      // Try to parse as JSON
       let verifyData;
       try {
         verifyData = JSON.parse(responseText);
-        console.log("✅ Parsed response:", verifyData);
-      } catch (parseError) {
-        console.error("❌ Failed to parse response as JSON:", parseError);
-        console.error("Raw response:", responseText);
+      } catch {
         toast.dismiss(loadingToast);
         toast.error(
           "Server error. Please contact support with reference: " +
@@ -145,7 +130,6 @@ const DonateCard: React.FC<DonateCardProps> = ({
           }
         );
       } else {
-        console.error("❌ Verification failed:", verifyData);
         toast.error(
           verifyData.message ||
             "Payment verification failed. Please contact support.",
@@ -154,8 +138,7 @@ const DonateCard: React.FC<DonateCardProps> = ({
           }
         );
       }
-    } catch (error) {
-      console.error("❌ Verification error:", error);
+    } catch {
       toast.dismiss(loadingToast);
       toast.error(`Verification failed. Reference: ${reference.reference}`, {
         duration: 8000,
@@ -280,7 +263,7 @@ const DonateCard: React.FC<DonateCardProps> = ({
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className={styles.amountInput}
+                className={styles.mailInput}
                 required
                 style={{
                   width: "100%",
