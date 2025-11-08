@@ -119,11 +119,6 @@
   border-color: #ef4036;
 }
 
-/* .programCard.highlighted {
-  background: linear-gradient(135deg, #f0f4ff 0%, #e6edff 100%);
-  border-color: #2c5aa0;
-} */
-
 .programIcon {
   font-size: 48px;
   margin-bottom: 20px;
@@ -145,7 +140,7 @@
 @media (max-width: 768px) {
   .equitySection,
   .outreachSection {
-    padding: 60px 20px;
+    padding: 40px 20px;
   }
 
   .sectionHeader {
