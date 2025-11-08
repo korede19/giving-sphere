@@ -8,18 +8,44 @@ import {
 } from "@/lib/supabase";
 
 export async function POST(request: Request) {
+  console.log("=== 🚀 VERIFY PAYMENT API CALLED ===");
+  console.log("Timestamp:", new Date().toISOString());
+  console.log("📋 Environment Check:");
+  console.log("- NODE_ENV:", process.env.NODE_ENV);
+  console.log(
+    "- PAYSTACK_SECRET_KEY exists:",
+    !!process.env.PAYSTACK_SECRET_KEY
+  );
+  console.log(
+    "- PAYSTACK_SECRET_KEY length:",
+    process.env.PAYSTACK_SECRET_KEY?.length || 0
+  );
+  console.log(
+    "- SUPABASE_SERVICE_ROLE_KEY exists:",
+    !!process.env.SUPABASE_SERVICE_ROLE_KEY
+  );
+  console.log(
+    "- NEXT_PUBLIC_SUPABASE_URL:",
+    process.env.NEXT_PUBLIC_SUPABASE_URL
+  );
+
   try {
     const body = await request.json();
+    console.log("📦 Request body received:", body);
+
     const { reference, donationType, dedication } = body;
 
     // Validate input
     if (!reference) {
+      console.error("❌ No reference provided");
       return NextResponse.json(
         { status: "error", message: "Reference is required" },
         { status: 400 }
       );
     }
 
+    console.log("🔍 Checking for duplicate transaction:", reference);
+    // Check if this reference has already been processed
     const exists = await donationExists(reference);
 
     if (exists) {
@@ -35,17 +61,25 @@ export async function POST(request: Request) {
 
     // Verify payment with Paystack
     console.log("🔍 Verifying payment with Paystack:", reference);
-    const response = await fetch(
-      `https://api.paystack.co/transaction/verify/${reference}`,
-      {
-        headers: {
-          Authorization: `Bearer ${process.env.PAYSTACK_SECRET_KEY}`,
-        },
-      }
-    );
+    const paystackUrl = `https://api.paystack.co/transaction/verify/${reference}`;
+    console.log("Paystack URL:", paystackUrl);
+
+    const response = await fetch(paystackUrl, {
+      headers: {
+        Authorization: `Bearer ${process.env.PAYSTACK_SECRET_KEY}`,
+      },
+    });
+
+    console.log("📡 Paystack response status:", response.status);
 
     if (!response.ok) {
-      console.error("❌ Paystack API error:", response.status);
+      console.error(
+        "❌ Paystack API error:",
+        response.status,
+        response.statusText
+      );
+      const errorText = await response.text();
+      console.error("Error response:", errorText);
       return NextResponse.json(
         { status: "error", message: "Failed to verify payment with Paystack" },
         { status: 400 }
@@ -53,8 +87,12 @@ export async function POST(request: Request) {
     }
 
     const data = await response.json();
-    console.log("✅ Paystack verification successful");
+    console.log(
+      "✅ Paystack verification response:",
+      JSON.stringify(data, null, 2)
+    );
 
+    // Check if payment was successful
     if (!data.status || data.data.status !== "success") {
       console.log("❌ Payment not successful:", data.data.status);
       return NextResponse.json(
@@ -63,6 +101,7 @@ export async function POST(request: Request) {
       );
     }
 
+    // Extract verified data from Paystack
     const verifiedAmount = data.data.amount / 100;
     const customerEmail = data.data.customer.email;
     const transactionReference = data.data.reference;
@@ -70,6 +109,14 @@ export async function POST(request: Request) {
     const authorizationCode = data.data.authorization?.authorization_code;
     const domain = data.data.domain;
 
+    console.log("💰 Payment details:", {
+      amount: verifiedAmount,
+      email: customerEmail,
+      reference: transactionReference,
+      domain: domain,
+    });
+
+    // In production, reject test transactions
     if (process.env.NODE_ENV === "production" && domain === "test") {
       console.warn("⚠️ Test transaction attempted in production:", reference);
       return NextResponse.json(
@@ -81,13 +128,16 @@ export async function POST(request: Request) {
       );
     }
 
+    // Validate minimum amount
     if (verifiedAmount < 100) {
+      console.error("❌ Amount too low:", verifiedAmount);
       return NextResponse.json(
         { status: "error", message: "Invalid donation amount" },
         { status: 400 }
       );
     }
 
+    // Prepare donation data
     const donationData: Donation = {
       reference: transactionReference,
       amount: verifiedAmount,
@@ -105,16 +155,17 @@ export async function POST(request: Request) {
       paystack_response: data.data,
     };
 
+    console.log("💾 Saving donation to database...");
     try {
-      console.log("💾 Saving donation to database...");
       const savedDonation = await saveDonation(donationData);
       console.log("✅ Donation saved successfully:", savedDonation.id);
 
+      // For monthly donations, set up recurring billing
       if (donationType === "monthly" && authorizationCode) {
         console.log("📅 Setting up recurring donation...");
 
         const nextChargeDate = new Date();
-        nextChargeDate.setMonth(nextChargeDate.getMonth() + 1); // 1 month from now
+        nextChargeDate.setMonth(nextChargeDate.getMonth() + 1);
 
         const recurringData: RecurringDonation = {
           customer_email: customerEmail,
@@ -135,6 +186,8 @@ export async function POST(request: Request) {
           );
         }
       }
+
+      console.log("🎉 Payment verification successful!");
       return NextResponse.json({
         status: "success",
         message: "Payment verified successfully",
@@ -180,10 +233,14 @@ export async function POST(request: Request) {
     }
   } catch (error: unknown) {
     console.error("❌ Payment verification error:", error);
+    const err = error as Error;
+    console.error("Error stack:", err.stack);
+
     return NextResponse.json(
       {
         status: "error",
         message: "Internal server error. Please contact support.",
+        debug: process.env.NODE_ENV === "development" ? err.message : undefined,
       },
       { status: 500 }
     );

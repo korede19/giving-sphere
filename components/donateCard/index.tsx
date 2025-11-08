@@ -83,10 +83,15 @@ const DonateCard: React.FC<DonateCardProps> = ({
     setIsProcessing(false);
     setShowEmailInput(false);
 
-    // Show loading toast
     const loadingToast = toast.loading("Verifying payment...");
 
     try {
+      console.log("🔍 Sending verification request:", {
+        reference: reference.reference,
+        donationType: donationAmount,
+        dedication: dedication,
+      });
+
       const verifyResponse = await fetch("/api/verify-payment", {
         method: "POST",
         headers: {
@@ -94,24 +99,44 @@ const DonateCard: React.FC<DonateCardProps> = ({
         },
         body: JSON.stringify({
           reference: reference.reference,
-          amount: amount,
           donationType: donationAmount,
           dedication: dedication,
         }),
       });
 
-      const verifyData = await verifyResponse.json();
+      console.log("📡 Response status:", verifyResponse.status);
+      console.log("📡 Response headers:", verifyResponse.headers);
 
-      // Dismiss loading toast
+      // Get the response text first
+      const responseText = await verifyResponse.text();
+      console.log("📄 Response text:", responseText);
+
+      // Try to parse as JSON
+      let verifyData;
+      try {
+        verifyData = JSON.parse(responseText);
+        console.log("✅ Parsed response:", verifyData);
+      } catch (parseError) {
+        console.error("❌ Failed to parse response as JSON:", parseError);
+        console.error("Raw response:", responseText);
+        toast.dismiss(loadingToast);
+        toast.error(
+          "Server error. Please contact support with reference: " +
+            reference.reference,
+          {
+            duration: 8000,
+          }
+        );
+        return;
+      }
+
       toast.dismiss(loadingToast);
 
       if (verifyData.status === "success") {
-        // Call the onDonate callback
         if (onDonate) {
           onDonate(amount, donationAmount === "monthly", dedication);
         }
 
-        // Show success toast
         toast.success(
           `Thank you for your donation of ₦${amount.toLocaleString()}! 🎉`,
           {
@@ -120,19 +145,21 @@ const DonateCard: React.FC<DonateCardProps> = ({
           }
         );
       } else {
-        toast.error("Payment verification failed. Please contact support.", {
-          duration: 6000,
-        });
+        console.error("❌ Verification failed:", verifyData);
+        toast.error(
+          verifyData.message ||
+            "Payment verification failed. Please contact support.",
+          {
+            duration: 6000,
+          }
+        );
       }
     } catch (error) {
-      console.error("Verification error:", error);
+      console.error("❌ Verification error:", error);
       toast.dismiss(loadingToast);
-      toast.error(
-        `Payment verification failed. Reference: ${reference.reference}`,
-        {
-          duration: 8000,
-        }
-      );
+      toast.error(`Verification failed. Reference: ${reference.reference}`, {
+        duration: 8000,
+      });
     }
   };
 
@@ -253,7 +280,7 @@ const DonateCard: React.FC<DonateCardProps> = ({
                 placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className={styles.mailInput}
+                className={styles.amountInput}
                 required
                 style={{
                   width: "100%",
