@@ -10,14 +10,13 @@
 
 .header {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .sectionTitle {
   font-size: 48px;
   font-weight: bold;
   color: #202020;
-  margin: 0 0 15px 0;
 }
 
 .sectionSubtitle {
@@ -74,7 +73,6 @@
   justify-content: center;
 }
 
-/* Text Testimonial */
 .textTestimonial {
   text-align: center;
   max-width: 1000px;
@@ -225,7 +223,6 @@
   right: -30px;
 }
 
-/* Indicators */
 .indicators {
   display: flex;
   justify-content: center;
@@ -254,7 +251,6 @@
   border-radius: 6px;
 }
 
-/* Responsive */
 @media (max-width: 1024px) {
   .navButton {
     width: 50px;
@@ -277,7 +273,7 @@
   }
 
   .sectionTitle {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .sectionSubtitle {
@@ -285,11 +281,11 @@
   }
 
   .carousel {
-    min-height: 600px;
+    min-height: 500px;
   }
 
   .slide {
-    min-height: 600px;
+    min-height: 500px;
   }
 
   .content {
@@ -326,9 +322,6 @@
   .prevButton {
     left: 5px;
   }
-  .overlay {
-    height: 60%;
-  }
 
   .nextButton {
     right: 5px;
@@ -337,7 +330,7 @@
 
 @media (max-width: 480px) {
   .sectionTitle {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .content {
@@ -355,10 +348,6 @@
   .audioTestimonial,
   .videoTestimonial {
     padding: 25px 20px;
-  }
-
-  .overlay {
-    width: 60%;
   }
 
   .mediaTitle {

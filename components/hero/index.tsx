@@ -7,7 +7,11 @@ import "swiper/css/effect-fade";
 import styles from "./styles.module.css";
 import { HeroImages } from "@/utils/data";
 import Link from "next/link";
-import DonateCard from "../donateCard";
+import dynamic from "next/dynamic";
+
+const DonateCard = dynamic(() => import("@/components/donateCard"), {
+  ssr: false, // ⬅️ This prevents window error
+});
 
 const HeroSection = () => {
   return (
@@ -48,12 +52,16 @@ const HeroSection = () => {
               <button className={styles.btnOne}>
                 <Link href="/get-involved">Get Involved &rarr;</Link>
               </button>
-              <button className={styles.btnTwo}>Watch our story</button>
+              <button className={styles.btnTwo}>
+                <Link href="/our-work/#video">Watch our story</Link>
+              </button>
             </div>
           </div>
 
           <div className={styles.donateComponent}>
-            <DonateCard />
+            <DonateCard
+              paystackPublicKey={process.env.NEXT_PUBLIC_PAYSTACK_KEY!}
+            />
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Ubuntu, Montserrat } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const rubik = Ubuntu({
@@ -27,7 +28,35 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${rubik.variable} ${poppins.variable}`}>
-      <body>{children}</body>
+      <body>
+        <Toaster
+          position="top-center"
+          reverseOrder={false}
+          toastOptions={{
+            success: {
+              style: {
+                background: "#10b981",
+                color: "#fff",
+              },
+              duration: 5000,
+            },
+            error: {
+              style: {
+                background: "#ef4444",
+                color: "#fff",
+              },
+              duration: 6000,
+            },
+            loading: {
+              style: {
+                background: "#3b82f6",
+                color: "#fff",
+              },
+            },
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

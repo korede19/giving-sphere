@@ -89,11 +89,11 @@ export default function VolunteerPartner() {
           <div className={styles.contentGrid}>
             <div className={styles.imageSection}>
               <Image
-                src={"/assets/imageTwo.jpg"}
+                src={"/assets/partnership.jpg"}
                 alt="Volunteer"
                 width={300}
                 height={300}
-                className={styles.image}
+                className={styles.imageTwo}
               />
             </div>
 

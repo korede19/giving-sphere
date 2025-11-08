@@ -146,7 +146,8 @@
   align-items: center;
 }
 
-.image {
+.image,
+.imageTwo {
   width: 100%;
   height: auto;
   border-radius: 12px;
@@ -241,7 +242,7 @@
   .sectionHeader {
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .sectionNumber {
@@ -249,7 +250,7 @@
   }
 
   .sectionTitle {
-    font-size: 28px;
+    font-size: 32px;
   }
 
   .mainText {
@@ -261,6 +262,14 @@
     gap: 15px;
   }
 
+  .imageSection {
+    order: 1;
+  }
+
+  .textContent {
+    order: 2;
+  }
+
   .benefitIcon {
     font-size: 24px;
   }
@@ -270,7 +279,6 @@
   }
 
   .contactBox {
-    flex-direction: column;
     padding: 20px;
     gap: 12px;
   }
@@ -300,5 +308,8 @@
   .contributionItem {
     font-size: 15px;
     padding: 10px 12px;
+  }
+  .imageTwo {
+    display: none;
   }
 }

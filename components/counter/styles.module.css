@@ -85,3 +85,22 @@
     font-size: 12px;
   }
 }
+
+@media (max-width: 480px) {
+  .counterWrapper {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .counterContainer > h2 {
+    font-size: 32px;
+  }
+
+  .counterNumber {
+    font-size: 28px;
+  }
+
+  .counterLabel {
+    font-size: 11px;
+    width: 150px;
+  }
+}

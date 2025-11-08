@@ -68,7 +68,7 @@
 
   .colOne,
   .colTwo {
-    text-align: center;
+    text-align: left;
   }
 
   .colTwo > h2 {

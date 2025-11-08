@@ -59,7 +59,7 @@ export default function MedicalSupport() {
           <h3 className={styles.subsectionTitle}>
             Hear from our impacted families:
           </h3>
-          <div className={styles.videoPlaceholder}>
+          <div className={styles.videoPlaceholder} id="video">
             <video controls className={styles.video}>
               <source src="/videos/video.MP4" type="video/mp4" />
             </video>

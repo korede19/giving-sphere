@@ -10,7 +10,6 @@ export default function TeamSlider() {
   const itemsPerPage = 3;
   const totalPages = Math.ceil(teamMembers.length / itemsPerPage);
 
-  // Auto-play effect
   useEffect(() => {
     if (isPaused) return;
 
@@ -20,7 +19,7 @@ export default function TeamSlider() {
           ? 0
           : prevIndex + itemsPerPage
       );
-    }, 4000); // Change slide every 4 seconds
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [isPaused]);

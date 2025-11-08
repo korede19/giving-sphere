@@ -25,3 +25,13 @@
   font-weight: 700;
   position: relative;
 }
+
+@media (max-width: 768px) {
+  .container {
+    height: 30vh;
+  }
+
+  .container h2 {
+    font-size: 40px;
+  }
+}

@@ -16,7 +16,6 @@ const HomePage = () => {
       <ScrollCounter />
       <AboutComp />
       <Testimonial />
-      {/* <OurValues /> */}
       <TeamSlider />
       <Footer />
     </div>

@@ -1,7 +1,11 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import styles from "./styles.module.css";
-import DonateCard from "../donateCard";
+import dynamic from "next/dynamic";
+
+const DonateCard = dynamic(() => import("@/components/donateCard"), {
+  ssr: false,
+});
 
 export default function DonateModal() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +22,6 @@ export default function DonateModal() {
     };
   }, [isOpen]);
 
-  // Close modal on ESC key press
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
@@ -73,7 +76,9 @@ export default function DonateModal() {
 
             {/* Your Donate Component */}
             <div className={styles.donateWrapper}>
-              <DonateCard />
+              <DonateCard
+                paystackPublicKey={process.env.NEXT_PUBLIC_PAYSTACK_KEY!}
+              />
             </div>
           </div>
         </div>

@@ -166,4 +166,8 @@
   .previewText {
     font-size: 14px;
   }
+  .cardFooter {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px;
+  }
 }
